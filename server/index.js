@@ -2,7 +2,10 @@ require('dotenv').config()
 const express = require('express')
 const session = require('express-session');
 const massive = require('massive')
+const {registerUser, loginUser} = require('./controllers/authController')
 const {CONNECTION_STRING, SESSION_SECRET} = process.env
+
+
 const app = express()
 app.use(express.json())
 
@@ -21,7 +24,8 @@ app.use(session({
     // }
 }))
 
-app.post('/auth/register')
+app.post('/auth/register', registerUser)
+app.post('/auth/login', loginUser)
 
 
 

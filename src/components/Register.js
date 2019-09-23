@@ -2,6 +2,11 @@ import React from 'react';
 import axios from 'axios'
 import {Link} from 'react-router-dom'
 import {updateUser} from '../redux/reducers/userReducer'
+
+
+
+
+
 class Register extends React.Component{
     constructor(){
         super()
@@ -48,6 +53,8 @@ class Register extends React.Component{
             <button>Employer</button>
             </Link>
             <div>
+                {this.state.triedToClick === true ? <h5>Please Fill In All Fields</h5> : null}
+                {this.state.serverErrorMessage !== "" ? <h5>{this.state.serverErrorMessage}</h5> : null}
                 <input 
                 placeholder='First Name'
                 name="firstName"
@@ -76,6 +83,11 @@ class Register extends React.Component{
             <div>
                 <button onClick={this.registerClick}>Get Started</button>
             </div>
+            
+            <h6>Already have an account? <Link to='/login'>
+                    Sign in here </Link>
+            </h6>
+        
             </>
 
         )
