@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios'
 import {Link} from 'react-router-dom'
+import {connect} from 'react-redux'
 import {updateUser} from '../redux/reducers/userReducer'
 
 
@@ -25,14 +26,15 @@ class Register extends React.Component{
 
     handleChange = (e) => {
         this.setState({
-            [e.target.value]: e.target.value
+            [e.target.name]: e.target.value
         })
     }
 
     registerClick = () => {
         const {firstName, lastName, email, username, password} = this.state
         if(firstName !== "" && lastName !== "" && email !== "" && username !== "" && password !== ""){
-            axios.post('/auth/register').then(response => {
+            axios.post('/auth/register', {firstName, lastName, email, username, password}).then(response => {
+                console.log("hit")
                 this.props.updateUser({firstName, lastName, email, username})
                 this.setState({shouldRedirect: true})
             })
@@ -54,7 +56,7 @@ class Register extends React.Component{
             </Link>
             <div>
                 {this.state.triedToClick === true ? <h5>Please Fill In All Fields</h5> : null}
-                {this.state.serverErrorMessage !== "" ? <h5>{this.state.serverErrorMessage}</h5> : null}
+                {/* {this.state.serverErrorMessage !== "" ? <h5>{this.state.serverErrorMessage}</h5> : null} */}
                 <input 
                 placeholder='First Name'
                 name="firstName"
@@ -81,7 +83,9 @@ class Register extends React.Component{
                 onChange={this.handleChange}/>
             </div>
             <div>
+                <Link to='/user'>
                 <button onClick={this.registerClick}>Get Started</button>
+                </Link>
             </div>
             
             <h6>Already have an account? <Link to='/login'>
@@ -93,4 +97,4 @@ class Register extends React.Component{
         )
     }
 }
-export default Register
+export default connect(undefined, {updateUser})(Register)

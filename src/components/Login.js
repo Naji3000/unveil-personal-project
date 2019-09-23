@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios'
 import {updateUser} from '../redux/reducers/userReducer'
+import {connect} from 'react-redux'
+import {Link} from "react-router-dom"
 
 class Login extends React.Component{
     constructor(){
@@ -16,17 +18,18 @@ class Login extends React.Component{
 
     handleChange = (e) => {
         this.setState({
-            [e.target.value]: e.target.value
+            [e.target.name]: e.target.value
         })
     }
 
-    loginClick= () => {
+    loginClick = () => {
         const {username, password} = this.state
         if(username === "" && password === ""){
             this.setState({triedToClick: true})
         } else {
             axios.post('/auth/login', {username, password})
             .then(response => {
+                console.log("fire");
                 this.props.updateUser(response.data)
                 this.setState({shouldRedirect: true})
             }).catch(err => {
@@ -36,8 +39,13 @@ class Login extends React.Component{
 
     }
 
+    if
+
 
     render(){
+
+        console.log(this.props)
+
         return (
             <>
             
@@ -50,11 +58,15 @@ class Login extends React.Component{
                 <input 
                 placeholder='Password'
                 name='password'
+                type='password'
                 onChange={this.handleChange}/>
             </div>
 
             <div>
-                <button onClick={()=> this.loginClick}>Login</button>
+                <Link to='/user'>
+                <button onClick={this.loginClick}>Login</button>
+                </Link>
+                
             </div>
             </>
 
@@ -62,4 +74,10 @@ class Login extends React.Component{
     }
 }
 
-export default Login
+const mapStateToProps = reduxState => {
+    return {
+        user: reduxState.userReducer.user
+    }
+}
+
+export default connect(mapStateToProps, {updateUser}) (Login)

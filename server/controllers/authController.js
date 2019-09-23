@@ -1,13 +1,14 @@
-const bcyrpt = require('bcryptjs')
+const bcrypt = require('bcryptjs')
 
 
 
 async function registerUser(req, res){
     const {firstName, lastName, email, username, password} = req.body
     const db = req.app.get('db')
-    const count =  await db.checkForTakenUserNameOrEmail(username, email)
+    const count =  await db.checkForTakenUsernameOrEmail(username, email)
+    console.log(count)
         if(count.length === 0 ){
-        bcyrpt.hash(password, 12).then(hash => {
+        bcrypt.hash(password, 12).then(hash => {
             db.registerUser(firstName, lastName, email, username, hash).then(()=> {
                 req.session.user = {
                     firstName, 
@@ -19,6 +20,7 @@ async function registerUser(req, res){
             })
         })
     } else {
+        console.log("ac22")
         res.status(409).json({
             error: "Username or Email Already Exist."
         })
@@ -30,7 +32,7 @@ function loginUser(req,res) {
     const db = req.app.get('db');
     db.getPasswordUsername(username).then(user => {
         let hash = user[0].password;
-        bcyrpt.compare(password, hash).then(puSame => {
+        bcrypt.compare(password, hash).then(puSame => {
             if(puSame){
                 req.session.user = {
                     username,

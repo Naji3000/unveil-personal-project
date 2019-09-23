@@ -1,4 +1,5 @@
 import React from 'react'
+import './styles/Employer.css'
 
 
 
@@ -12,7 +13,20 @@ class Employer extends React.Component{
     render(){
         return(
             <>
-                <h1>EMPLOYEERRRR!!!</h1>
+            
+            <div className='employer-title' >
+                <h1 className='choose'>Choose The Industry You Would Like To View </h1>
+            </div>
+            
+            <div className="industry-fields">
+
+                <button>Audio Engineer</button>
+                <button>Music Artist</button>
+                <button>Film Composer</button>
+                <button>Game Designer</button>
+            </div>
+            
+            
             </>
         )
     }

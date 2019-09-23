@@ -1,0 +1,18 @@
+
+
+.employer-title {
+    display: flex;
+    justify-content: center;
+}
+
+
+.choose {
+    font-size: 40px;
+    color: black
+}
+
+.industry-fields{
+    display: flex;
+    justify-content: center;
+    flex-direction: column
+}
