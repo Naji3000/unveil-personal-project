@@ -2,7 +2,7 @@ body {
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgb(199, 148, 145) 0%, rgb(212, 155, 155) 35%, rgba(172, 92, 238, 0.651) 100%);
 }
-.employer {
+.employer{
         display: flex;
         justify-content: center;
         animation: neon6 .5s infinite alternate;
@@ -12,7 +12,7 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    
+    text-decoration: none;
 }
 /* .button-1 {
     display: block;
@@ -36,6 +36,11 @@ body {
     color: rgb(255, 255, 255);
     font-family: 'Alfa Slab One', cursive;
     font-size: 50px;
+}
+
+.not-employer{
+    display: flex;
+    justify-content: center;
 }
 
 

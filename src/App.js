@@ -4,15 +4,20 @@ import routes from './routes'
 import Nav from './components/Nav'
 
 
+function App (){
 
-function App() {
   return (
     <>
       
-      <Nav />
+      {/* <Nav /> */}
       {routes}
     </>
   );
 }
+
+
+
+  
+
 
 export default App;

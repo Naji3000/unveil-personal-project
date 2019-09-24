@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios'
+import Nav from './Nav'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 import {updateUser} from '../redux/reducers/userReducer'
@@ -51,8 +52,12 @@ class Register extends React.Component{
 
 
         return (
-            
+
+            <div>
+                <Nav /> 
         <main className='Register'>
+            
+
 
             <div className='container'>
                     Create Your Account 
@@ -108,6 +113,7 @@ class Register extends React.Component{
                         </h6>
             </div>
         </main>
+            </div>
         )
     }
 }

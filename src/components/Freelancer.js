@@ -1,4 +1,8 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
+import './styles/freelanceProfile.css'
+
+
 
 class Freelancer extends React.Component {
     constructor(){
@@ -10,7 +14,26 @@ class Freelancer extends React.Component {
     render(){
         return(
             <>
-                <h1> Portfolio Profile </h1>
+            <section className='profile-container'>
+                
+                <div className='portfolio-name'>
+
+                <h1> Naji Ali </h1>
+                <div>
+                <Link to='/feed'>
+                <button> News Feed </button>
+                </Link>
+
+                </div>
+                </div>
+            
+
+
+            </section>
+
+            
+                
+                
             </>
         )
     }

@@ -50,9 +50,18 @@ class Login extends React.Component{
         return (
             <main className='container-2'>
                 <div className='box'>
+                    
+                    <div className='login-greeting'>
+                    <h3>Hi There!</h3>
+                    </div>
 
-                    {/* <h3>Hi There!</h3>
-                    <h4> We're happy to see you again.</h4> */}
+                    <div className='login-greeting-2'>
+
+                    <h5> We're happy to see you again.</h5>
+
+                    </div>
+
+
 
                             <div className="input-login">
                                 <input 
@@ -76,6 +85,15 @@ class Login extends React.Component{
                         <Link className='login-button' to='/user'>
                         <button onClick={this.loginClick}>Login</button>
                         </Link>
+
+                        <div className='register-text'>
+                        <h6>Don't have an account yet? <Link to='/'>Register here.</Link></h6>
+
+                        </div>
+                        <h6>Or connect with</h6>
+
+                            <button className='google-button'>Google</button>
+                
 
                 </div>
             </main>

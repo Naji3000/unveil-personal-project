@@ -1,11 +1,12 @@
 import React from 'react';
 import axios from 'axios'
+import './styles/explore.css'
 
 class Explore extends React.Component {
     constructor(){
         super()
         this.state = {
-            post: []
+            
         }
     }
     
@@ -14,7 +15,8 @@ class Explore extends React.Component {
     render(){
         return(
             <>
-            <h1>EXPLORE TALENT</h1>
+                <h1>Explore</h1>
+        
             </>
 
         )

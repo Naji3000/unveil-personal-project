@@ -16,13 +16,14 @@
     color:black;
     font-family: 'Permanent Marker', cursive;
     font-size: 80px;
-    margin: 0
+    margin: 0;
 }
 .slogan {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 0;
-    font-size: 30px;
+    font-size: 27px;
     color: rgb(10, 10, 10);
     font-family: 'Rock Salt', cursive;
 }

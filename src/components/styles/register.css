@@ -2,6 +2,7 @@
 .Register {
     display: flex;
     justify-content: center;
+    margin: 0
     /* background-image: url("https://www.actorsconnection.com/wp-content/uploads/2015/11/acting-action-actor-275200.jpg"); */
     /* background: no-repeat; */
     /* background-size: 100vw 103vh;
@@ -14,6 +15,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 0;
     /* background-color: transparent; */
     height: 55vh;
     width: 100vw;
@@ -24,7 +26,7 @@
 }
 .input-first {
     margin-top: 10px;
-    margin-bottom: 5px
+    margin-bottom: 5px;
 }
 .input-last {
     margin-top: 10px;

@@ -33,6 +33,12 @@ class Employer extends React.Component{
 
                 
             </div>
+
+            <div className='not-employer'>
+
+            <h6>Not looking for talent? <Link to='/'>Go Back</Link></h6>
+            
+            </div>
             
             
             </section>
