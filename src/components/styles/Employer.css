@@ -1,18 +1,49 @@
+body {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgb(199, 148, 145) 0%, rgb(212, 155, 155) 35%, rgba(172, 92, 238, 0.651) 100%);
+}
+.employer {
+        display: flex;
+        justify-content: center;
+        animation: neon6 .5s infinite alternate;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+/* .button-1 {
+    display: block;
+    width: 80%;
+    border: 2px;
+    border-radius: 15px;
+    background-image: url("https://iconcollective.com/wp-content/uploads/FabFilter-Pro-Q-3-Mixing-Mistakes-652x435.jpg");
+    padding: 14px 28px;
+    cursor: pointer;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    font-family: 'Alfa Slab One', cursive
+    
+    
+} */
 
 
-.employer-title {
+.choose{
     display: flex;
     justify-content: center;
+    color: rgb(255, 255, 255);
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 50px;
 }
 
 
-.choose {
-    font-size: 40px;
-    color: black
+@keyframes neon6 {
+from {
+    text-shadow: 0 0 5px  0 0 40px #ee68dc, 0 0 70px #ee68dc, 0 0 80px #ee68dc, 0 0 100px #ee68dc, 0 0 150px #ee68dc;
 }
-
-.industry-fields{
-    display: flex;
-    justify-content: center;
-    flex-direction: column
+to {
+    text-shadow:  0 0 20px #ee68dc, 0 0 35px #ee68dc, 0 0 40px #ee68dc, 0 0 50px #ee68dc, 0 0 75px #ee68dc;
+}
 }

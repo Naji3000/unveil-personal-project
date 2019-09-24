@@ -1,6 +1,6 @@
 import React from 'react'
-import './styles/Employer.css'
-
+import {Link} from 'react-router-dom'
+import './styles/employer.css'
 
 
 class Employer extends React.Component{
@@ -12,22 +12,30 @@ class Employer extends React.Component{
     }
     render(){
         return(
-            <>
             
-            <div className='employer-title' >
+            <section >
+            
+            <div className='employer' >
                 <h1 className='choose'>Choose The Industry You Would Like To View </h1>
             </div>
-            
-            <div className="industry-fields">
 
-                <button>Audio Engineer</button>
-                <button>Music Artist</button>
-                <button>Film Composer</button>
-                <button>Game Designer</button>
+
+            <div>
+                
+                <Link className='buttons' to='/explore'>
+                    
+                <button className="button-1">Audio Engineer</button>
+                <button >Music Artist</button>
+                <button >Film Composer</button>
+                <button >Game Designer</button>
+
+                </Link>
+
+                
             </div>
             
             
-            </>
+            </section>
         )
     }
 }

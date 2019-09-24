@@ -1,0 +1,58 @@
+
+.Register {
+    display: flex;
+    justify-content: center;
+    /* background-image: url("https://www.actorsconnection.com/wp-content/uploads/2015/11/acting-action-actor-275200.jpg"); */
+    /* background: no-repeat; */
+    /* background-size: 100vw 103vh;
+    margin-top: -23vh;
+    height: 103vh;
+     */
+    
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: transparent; */
+    /* height: 100vh;
+    width: 100vw; */
+    align-items: center;
+}
+.employer-button{
+    margin-top: 10px
+}
+.input-first {
+    margin-top: 10px;
+    margin-bottom: 5px
+}
+.input-last {
+    margin-top: 10px;
+    margin-bottom: 5px
+}
+
+.input-email{
+    margin-top: 10px;
+    margin-bottom: 5px
+}
+
+.input-user{
+    margin-top: 10px;
+    margin-bottom: 5px
+}
+.input-pass{
+    margin-top: 10px;
+    margin-bottom: 5px
+}
+
+.register-button{
+    margin-top: 10px;
+    margin-bottom: 5px
+}
+
+/* .firstName-button {
+    margin-top: 30px
+} */
+
+
+

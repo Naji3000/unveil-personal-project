@@ -1,0 +1,14 @@
+.container-2{
+    display: flex;
+    justify-content: center
+}
+
+.input-login{
+    margin-right: 5px
+}
+
+
+.login-button{
+    display: flex;
+    justify-content: center
+}

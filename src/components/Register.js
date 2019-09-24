@@ -3,6 +3,7 @@ import axios from 'axios'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 import {updateUser} from '../redux/reducers/userReducer'
+import './styles/register.css'
 
 
 
@@ -50,50 +51,63 @@ class Register extends React.Component{
 
 
         return (
-            <>
-            <Link to='/employer'>
-            <button>Employer</button>
-            </Link>
-            <div>
+            
+        <main className='Register'>
+
+            <div className='container'>
+                    Create Your Account 
+
+                    <Link className='employer-button' to='/employer'>
+                    <button>Employer</button>
+                    </Link>
+
+
                 {this.state.triedToClick === true ? <h5>Please Fill In All Fields</h5> : null}
                 {/* {this.state.serverErrorMessage !== "" ? <h5>{this.state.serverErrorMessage}</h5> : null} */}
-                <input 
-                placeholder='First Name'
-                name="firstName"
-                onChange={this.handleChange}/>
-                <input 
-                placeholder='Last Name'
-                name="lastName"
-                onChange={this.handleChange}/>
-            </div>
-            <div>
-                <input 
-                placeholder='email'
-                name='email'
-                onChange={this.handleChange}/>
-            </div>
-            <div>
-                <input 
-                placeholder='Username'
-                name='username'
-                onChange={this.handleChange}/>
+                    <div className='input-first'>
+                            <input 
+                            placeholder='First Name'
+                            name="firstName"
+                            onChange={this.handleChange}/>
+                    </div>
 
-                <input placeholder='Password'
-                name='password'
-                onChange={this.handleChange}/>
-            </div>
-            <div>
-                <Link to='/user'>
+                                <div className='input-last'>
+                                    <input 
+                                    placeholder='Last Name'
+                                    name="lastName"
+                                    onChange={this.handleChange}/>
+                                </div>
+
+                                            <div className='input-email'>
+                                                    <input 
+                                                    placeholder='email'
+                                                    name='email'
+                                                    onChange={this.handleChange}/>
+                                            </div>
+
+                                                        <div className='input-user'>
+                                                            <input 
+                                                            placeholder='Username'
+                                                            name='username'
+                                                            onChange={this.handleChange}/>
+                                                        </div>
+                                                        <div className='input-pass'>
+                                                            <input placeholder='Password'
+                                                            name='password'
+                                                            onChange={this.handleChange}/>
+
+                                                        </div>
+
+            <div className='register-button'>
+                {/* <Link to='/user'> */}
                 <button onClick={this.registerClick}>Get Started</button>
-                </Link>
+                {/* </Link> */}
             </div>
-            
-            <h6>Already have an account? <Link to='/login'>
-                    Sign in here </Link>
-            </h6>
-        
-            </>
-
+                        <h6>Already have an account? <Link to='/login'>
+                                Sign in here </Link>
+                        </h6>
+            </div>
+        </main>
         )
     }
 }

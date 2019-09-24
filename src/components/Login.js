@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios'
+import './styles/login.css'
 import {updateUser} from '../redux/reducers/userReducer'
 import {connect} from 'react-redux'
 import {Link} from "react-router-dom"
@@ -48,26 +49,33 @@ class Login extends React.Component{
 
         return (
             <>
-            
-            <div>
-                <input 
-                placeholder='Username'
-                name='username'
-                onChange={this.handleChange}/>
-
-                <input 
-                placeholder='Password'
-                name='password'
-                type='password'
-                onChange={this.handleChange}/>
-            </div>
-
-            <div>
-                <Link to='/user'>
-                <button onClick={this.loginClick}>Login</button>
-                </Link>
+            <div className='container-2'>
                 
+                            <div className="input-login">
+                                <input 
+                                placeholder='Username'
+                                name='username'
+                                onChange={this.handleChange}/>
+                            </div>
+                            
+                                        <div>
+                                            <input 
+                                            placeholder='Password'
+                                            name='password'
+                                            type='password'
+                                            onChange={this.handleChange}/>
+
+                                        </div>
+                        
+                    <div>
+                        <Link className='login-button' to='/user'>
+                        <button onClick={this.loginClick}>Login</button>
+                        </Link>
+                        
+                    </div>
+
             </div>
+
             </>
 
         )

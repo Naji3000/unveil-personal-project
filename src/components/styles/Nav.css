@@ -1,0 +1,28 @@
+/* .logo{
+    
+    background-image: url("https://i.imgur.com/cRhy5WB.png");
+    width: 40px;
+    height: 40px;
+} */
+.logo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    color:black;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 80px;
+    margin: 0
+}
+h3 {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    font-size: 30px;
+    color: rgb(10, 10, 10);
+    font-family: 'Rock Salt', cursive;
+}
