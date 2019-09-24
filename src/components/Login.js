@@ -48,9 +48,12 @@ class Login extends React.Component{
         console.log(this.props)
 
         return (
-            <>
-            <div className='container-2'>
-                
+            <main className='container-2'>
+                <div className='box'>
+
+                    {/* <h3>Hi There!</h3>
+                    <h4> We're happy to see you again.</h4> */}
+
                             <div className="input-login">
                                 <input 
                                 placeholder='Username'
@@ -67,17 +70,15 @@ class Login extends React.Component{
 
                                         </div>
                         
-                    <div>
+
+
+                    
                         <Link className='login-button' to='/user'>
                         <button onClick={this.loginClick}>Login</button>
                         </Link>
-                        
-                    </div>
 
-            </div>
-
-            </>
-
+                </div>
+            </main>
         )
     }
 }

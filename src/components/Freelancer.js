@@ -10,7 +10,7 @@ class Freelancer extends React.Component {
     render(){
         return(
             <>
-                <h1> USERRRR!!!</h1>
+                <h1> Portfolio Profile </h1>
             </>
         )
     }

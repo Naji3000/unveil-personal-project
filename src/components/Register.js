@@ -37,7 +37,7 @@ class Register extends React.Component{
             axios.post('/auth/register', {firstName, lastName, email, username, password}).then(response => {
                 console.log("hit")
                 this.props.updateUser({firstName, lastName, email, username})
-                this.setState({shouldRedirect: true})
+                // this.setState({shouldRedirect: true})
             })
             .catch(err => {
                 this.setState({serverErrorMessage: err.response.data.error})

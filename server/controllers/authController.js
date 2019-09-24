@@ -6,10 +6,13 @@ async function registerUser(req, res){
     const {firstName, lastName, email, username, password} = req.body
     const db = req.app.get('db')
     const count =  await db.checkForTakenUsernameOrEmail(username, email)
+
     console.log(count)
+    
         if(count.length === 0 ){
         bcrypt.hash(password, 12).then(hash => {
             db.registerUser(firstName, lastName, email, username, hash).then(()=> {
+
                 req.session.user = {
                     firstName, 
                     lastName, 
@@ -27,13 +30,18 @@ async function registerUser(req, res){
     }
 }
 
+
+
 function loginUser(req,res) {
     const {username, password} = req.body
     const db = req.app.get('db');
+
     db.getPasswordUsername(username).then(user => {
         let hash = user[0].password;
+
         bcrypt.compare(password, hash).then(puSame => {
             if(puSame){
+
                 req.session.user = {
                     username,
                     firstName: user[0].first_name,
@@ -41,7 +49,8 @@ function loginUser(req,res) {
                     email: user[0].email
                 }
                 res.status(200).json(req.session.user)
-            } else{
+
+            } else {
                 res.status(401).json({
                     error: "Username or Password is incorrect"
                 })

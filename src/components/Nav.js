@@ -16,7 +16,7 @@ class Nav extends React.Component {
                 <h1 className='title'> unveil </h1>
 
                 <div>
-                <h3> Open Your Creative Mind </h3>
+                <h3 className='slogan'> Open Your Creative Mind </h3>
                 </div>
                 
             </div>
