@@ -90,10 +90,7 @@ import {connect} from 'react-redux'
 import {Link} from "react-router-dom"
 
 
-firebase.initializeApp({
-    apiKey: "AIzaSyA01LUtEjSFwS_4toV0NsHBUzpsd4QfNTU",
-    authDomain: "unveil-62c36.firebaseapp.com"
-})
+
 
 class Login extends React.Component {
     constructor(){
