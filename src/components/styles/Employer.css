@@ -14,20 +14,111 @@ body {
     flex-direction: column;
     text-decoration: none;
 }
-/* .button-1 {
-    display: block;
+.button-1 {
+    display: block flex;
     width: 80%;
     border: 2px;
     border-radius: 15px;
-    background-image: url("https://iconcollective.com/wp-content/uploads/FabFilter-Pro-Q-3-Mixing-Mistakes-652x435.jpg");
+    background-image: url("");
     padding: 14px 28px;
     cursor: pointer;
     font-size: 30px;
-    color: rgb(255, 255, 255);
-    font-family: 'Alfa Slab One', cursive
-    
-    
-} */
+    color: rgb(0, 0, 0);
+    font-family: 'Alfa Slab One', cursive;
+    margin-bottom: 30px
+}
+
+.button-2 {
+    display: block flex;
+    width: 80%;
+    border: 2px;
+    border-radius: 15px;
+    background-image: url("");
+    padding: 14px 28px;
+    cursor: pointer;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    font-family: 'Alfa Slab One', cursive;
+    margin-bottom: 30px
+}
+.button-3 {
+    display: block flex;
+    width: 80%;
+    border: 2px;
+    border-radius: 15px;
+    background-image: url("");
+    padding: 14px 28px;
+    cursor: pointer;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    font-family: 'Alfa Slab One', cursive;
+    margin-bottom: 30px
+}
+.button-4 {
+    display: block flex;
+    width: 80%;
+    border: 2px;
+    border-radius: 15px;
+    background-image: url("");
+    padding: 14px 28px;
+    cursor: pointer;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    font-family: 'Alfa Slab One', cursive;
+    margin-bottom: 30px
+}
+.button-5 {
+    display: block flex;
+    width: 80%;
+    border: 2px;
+    border-radius: 15px;
+    background-image: url("");
+    padding: 14px 28px;
+    cursor: pointer;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    font-family: 'Alfa Slab One', cursive;
+    margin-bottom: 30px
+}
+.button-6 {
+    display: block flex;
+    width: 80%;
+    border: 2px;
+    border-radius: 15px;
+    background-image: url("");
+    padding: 14px 28px;
+    cursor: pointer;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    font-family: 'Alfa Slab One', cursive;
+    margin-bottom: 30px
+}
+.button-7 {
+    display: block flex;
+    width: 80%;
+    border: 2px;
+    border-radius: 15px;
+    background-image: url("");
+    padding: 14px 28px;
+    cursor: pointer;
+    font-size: 30px;
+    color: rgb(0, 0, 0);;
+    font-family: 'Alfa Slab One', cursive;
+    margin-bottom: 30px
+}
+.button-8 {
+    display: block flex;
+    width: 80%;
+    border: 2px;
+    border-radius: 15px;
+    background-image: url("");
+    padding: 14px 28px;
+    cursor: pointer;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    font-family: 'Alfa Slab One', cursive;
+    margin-bottom: 30px
+}
 
 
 .choose{

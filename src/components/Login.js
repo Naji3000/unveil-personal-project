@@ -1,4 +1,3 @@
-
 import React from 'react';
 import axios from 'axios'
 import firebase from 'firebase';
@@ -7,9 +6,13 @@ import './styles/login.css'
 import {updateUser} from '../redux/reducers/userReducer'
 import {connect} from 'react-redux'
 import {Link} from "react-router-dom"
+require('dotenv').config()
 
 
-
+firebase.initializeApp({
+    apiKey: process.env.REACT_APP_FIREBASE_KEY,
+    authDomain: "unveil-62c36.firebaseapp.com"
+})
 
 class Login extends React.Component {
     constructor(){
@@ -27,7 +30,6 @@ class Login extends React.Component {
         signInFlow: "popup",
         signInOptions: [
         firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-        
         ],
         callbacks: {
             signInSuccess: () => false
@@ -36,10 +38,12 @@ class Login extends React.Component {
 
     componentDidMount = () => {
     firebase.auth().onAuthStateChanged(user => {
-        this.setState({ isSignedIn: !!user })
+        this.setState({ isSignedIn: user })
             console.log("user", user)
     })
 }
+
+
 
 handleChange = (e) => {
     this.setState({
@@ -64,78 +68,72 @@ loginClick = () => {
 }
 
 
-
     render() {
         return (
-            
-        <main className='container-2'>
-    
-            <div className='box'>
+
+            <main className='container-2'>
                 
-    
-    
-                <div className='login-greeting'>
-                <h3>Hi There!</h3>
-                </div>
-    
-                <div className='login-greeting-2'>
-    
-                <h5> We're happy to see you again.</h5>
-    
-                </div>
-    
-                        <div className="input-login">
-                            <input 
-                            placeholder='Username'
-                            name='username'
-                            onChange={this.handleChange}/>
-                        </div>
-                        
-                                    <div>
-                                        <input 
-                                        placeholder='Password'
-                                        name='password'
-                                        type='password'
-                                        onChange={this.handleChange}/>
-    
-                                    </div>
+                <div className='box'>
                     
-    
-    
-                
-                    <Link className='login-button' to='/user'>
-                    <button onClick={this.loginClick}>Login</button>
-                    </Link>
-    
-                    <div className='register-text'>
-                    <h6>Don't have an account yet? <Link to='/'>Register here.</Link></h6>
+                    <div className='login-greeting'>
+                    <h3>Hi There!</h3>
                     </div>
-
-                    <h6>Or connect with</h6>
-
-                    <div className='google-button'>
-
-                            {
-                            this.state.isSignedIn ? (
-                        <span>
-                            <div>Signed In!</div>
-                            <button onClick={() => firebase.auth().signOut()}>Sign out!</button>
-                            <h1>Welcome {firebase.auth().currentUser.displayName}</h1>
+        
+                    <div className='login-greeting-2'>
+                    <h5> We're happy to see you again.</h5>
+                    </div>
+        
+                            <div className="input-login">
+                                <input 
+                                placeholder='Username'
+                                name='username'
+                                onChange={this.handleChange}/>
+                            </div>
                             
-                        </span>
-                        ) : (
-                        <StyledFirebaseAuth
-                            uiConfig={this.uiConfig}
-                            firebaseAuth={firebase.auth()}
-                        />
-                        )}
-
-                    </div>
+                                        <div>
+                                            <input 
+                                            placeholder='Password'
+                                            name='password'
+                                            type='password'
+                                            onChange={this.handleChange}/>
+                                        </div>
                         
-            
-    
-            </div>
-        </main>
+
+                        <Link className='login-button' to='/user'>
+                        <button onClick={this.loginClick}>Login</button>
+                        </Link>
+        
+                        <div className='register-text'>
+                        <h6>Don't have an account yet? <Link to='/'>Register here.</Link></h6>
+                        </div>
+
+                        <h6>Or connect with</h6>
+
+                        <div className='google-button'>
+
+                                {
+                                this.state.isSignedIn ? (
+                            <span>
+                                <div className='google-sign-in'>Signed In!</div>
+
+                                <div className='google-sign-out'>
+                                <button onClick={() => firebase.auth().signOut()}>Sign out!</button>
+                                </div>
+                                <h4 className='google-greeting'>Welcome {firebase.auth().currentUser.displayName}</h4>
+                            </span>
+                            ) : (
+                            <StyledFirebaseAuth
+                                uiConfig={this.uiConfig}
+                                firebaseAuth={firebase.auth()}
+                            />
+                            )}
+
+                        </div>
+                            
+                
+        
+                </div>
+            </main>
         )
     }
 }

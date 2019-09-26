@@ -25,9 +25,14 @@ class Employer extends React.Component{
                 <Link className='buttons' to='/explore'>
                     
                 <button className="button-1">Audio Engineer</button>
-                <button >Music Artist</button>
-                <button >Film Composer</button>
-                <button >Game Designer</button>
+                <button className="button-2">Music Artist</button>
+                <button className="button-3">Film Composer</button>
+                <button className="button-4">Game Designer</button>
+                <button className="button-5">Sound Designer</button>
+                <button className="button-6">Director</button>
+                <button className="button-7">Music Producer</button>
+                <button className="button-8">Film Producer</button>
+            
 
                 </Link>
 
@@ -37,7 +42,7 @@ class Employer extends React.Component{
             <div className='not-employer'>
 
             <h6>Not looking for talent? <Link to='/'>Go Back</Link></h6>
-            
+
             </div>
             
             

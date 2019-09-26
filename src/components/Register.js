@@ -104,9 +104,9 @@ class Register extends React.Component{
                                                         </div>
 
             <div className='register-button'>
-                {/* <Link to='/user'> */}
+                <Link to='/user'>
                 <button onClick={this.registerClick}>Get Started</button>
-                {/* </Link> */}
+                </Link>
             </div>
                         <h6>Already have an account? <Link to='/login'>
                                 Sign in here </Link>

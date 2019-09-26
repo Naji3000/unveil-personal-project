@@ -1,43 +1,28 @@
-import React from 'react'
+import React from 'react';
+import FeedNav from './FeedNav'
+import './styles/feed.css'
+
 
 class Feed extends React.Component {
-    constructor(props){
-
-        super(props)
+    constructor(){
+        super()
         this.state = {
-            post: []
+            postTitle: '',
+            postInfo: '',
+            previousPost: ''
 
         }
     }
+    
 
 
     render(){
         return(
             <>
-            
-            <div >
-                <h1>News Feed</h1>
+            <FeedNav />
+            <div>
 
-
-                    <div className='field'>
-
-                            <input type='text' className='input-comment' name='name' placeholder='Your name' />
-                    
-                    </div>
-                    <div className='field'>
-
-                            <textarea className='textarea' name='comments' placeholder='add comment'></textarea>
-
-                    </div>
-                <div className='field'>
-                    
-                            <button className='button-is-privacy'>Submit</button>
-
-                </div>
-
-        </div>
-            
-            
+            </div>
             </>
         )
     }

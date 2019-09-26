@@ -4,7 +4,7 @@ class Nav extends React.Component {
     constructor(){
         super()
         this.state = {
-            menuOpenStatus: 'side-menu'
+            
         }
     }
     render(){
@@ -20,7 +20,7 @@ class Nav extends React.Component {
 
                 <h3 className='slogan'> Open Your Creative Mind </h3>
                 
-          
+        
             </>
         )
     }
