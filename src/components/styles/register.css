@@ -22,11 +22,23 @@
     align-items: center;
 }
 .employer-button{
-    margin-top: 10px
+    margin-top: 10px;
+    width: 5vw;
+    margin-bottom: 5px;
+    border: 1px solid #353b6e;
+    border-radius: 4px;
+    color: #f7f7f7;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 10px;
+    background-color:rgba(102, 51, 153, 0.644);
+    
+    
 }
 .input-first {
     margin-top: 10px;
     margin-bottom: 5px;
+    
 }
 .input-last {
     margin-top: 10px;
@@ -49,8 +61,18 @@
 
 .register-button{
     margin-top: 10px;
-    margin-bottom: 5px
+    width: 10vw;
+    margin-bottom: 5px;
+    border: 1px solid #353b6e;
+    border-radius: 4px;
+    color: #f7f7f7;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: rgba(102, 51, 153, 0.644);
 }
+
+
 
 /* .firstName-button {
     margin-top: 30px

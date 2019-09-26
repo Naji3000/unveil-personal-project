@@ -62,8 +62,8 @@ class Register extends React.Component{
             <div className='container'>
                     Create Your Account 
 
-                    <Link className='employer-button' to='/employer'>
-                    <button>Employer</button>
+                    <Link  to='/employer'>
+                    <button className='employer-button'>Employer</button>
                     </Link>
 
 
@@ -103,9 +103,9 @@ class Register extends React.Component{
 
                                                         </div>
 
-            <div className='register-button'>
+            <div>
                 <Link to='/user'>
-                <button onClick={this.registerClick}>Get Started</button>
+                <button className='register-button' onClick={this.registerClick}>Get Started</button>
                 </Link>
             </div>
                         <h6>Already have an account? <Link to='/login'>

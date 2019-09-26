@@ -1,6 +1,6 @@
 INSERT INTO freelance_post
-(description, user_id, job_id)
-VALUE 
+(description, photos, user_id, job_id)
+VALUES
 ($1, $2, $3)
 
 

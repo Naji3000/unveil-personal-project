@@ -13,14 +13,13 @@
 //     const comment = e.target.elements.comment.value.trim();
 //     const name = e.target.elements.name.value.trim();
 
-//     // Make sure name and comment boxes are filled
+
 //     if (name && comment) {
 //       const commentObject = { name, comment };
 
 //       this.props.handleAddComment(commentObject);
 
-//       // Publish comment
-//       /*global Ably*/
+
 //       const channel = Ably.channels.get('comments');
 //       channel.publish('add_comment', commentObject, err => {
 //         if (err) {

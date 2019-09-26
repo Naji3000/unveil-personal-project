@@ -35,9 +35,9 @@
 
 /* .hamburger-gif, .side-menu{
     display: none;
-} */
+} 
 
-/* .side-div, .side-menu,.side-menu-open, .side-menu-close {
+.side-div, .side-div, .side-menu,.side-menu-open, .side-menu-close {
     width: 400px;
     height: 100vh;
     background: rgb(98, 179, 179);
@@ -59,9 +59,9 @@
 .side-menu-close{
     display: block;
     animation: close 1s forwards ease;
-} */
+} 
 
-/* @keyframes open {
+@keyframes open {
     to {
         transform: translateX(0px)
     }
@@ -84,11 +84,10 @@ img  {
     height: 40px;
     cursor: pointer;
 }
- */
 
 
 
-/* @media (max-width: 970px) {
+@media (max-width: 970px) {
     .link-1, .link-2, .link-3{
         display: none;
     }

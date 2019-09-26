@@ -7,7 +7,7 @@ import * as serviceWorker from './serviceWorker';
 import {HashRouter} from 'react-router-dom' 
 import {Provider} from 'react-redux'
 import store from './redux/store'
-require('./components/Ably')
+// require('./components/Ably')
 ReactDOM.render(
     
     <Provider store={store}>
