@@ -9,6 +9,7 @@ const cors = require('cors');
 const Datastore = require('nedb');
 const Pusher = require('pusher')
 const {registerUser, loginUser} = require('./controllers/authController')
+const {addPost, getPost, getPreviousPosts, editPost, deletePost} = require('./controllers/postController')
 const {CONNECTION_STRING, SESSION_SECRET} = process.env
 
 //express app
@@ -32,8 +33,8 @@ app.use(session({
 }))
 
 //multiparty
-
 const multipartMiddleware = multipart();
+
 
 
 massive(CONNECTION_STRING)
@@ -62,6 +63,13 @@ cloudinary.config({
 app.post('/auth/register', registerUser)
 app.post('/auth/login', loginUser)
 
+app.post('/api/post', addPost)
+app.get('/api/user/posts', getPreviousPosts)
+app.post('/api/post', getPost)
+app.put('/api/post/:id', editPost)
+app.delete('/api/post/:id', deletePost)
+
+
 //cloudinary endpoints
 
 app.get('/cloud/gallery', (req, res) => {
@@ -72,15 +80,11 @@ app.get('/cloud/gallery', (req, res) => {
 });
 
 app.post('/cloud/upload', multipartMiddleware, (req, res) => {
+    cloudinary.v2.uploader.upload(req.files.image.path, {}, function(error,result) {
 
-    cloudinary.v2.uploader.upload(req.files.image.path, {}, function(
-
-        error,
-        result
-    ) {
         if (error) {
             return res.status(500).send(error);
-    }
+    } 
     db.insert(Object.assign({}, result, req.body), (err, newDoc) => {
             if (err) {
                 return res.status(500).send(err);

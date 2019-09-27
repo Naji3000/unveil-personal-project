@@ -1,2 +1,2 @@
-SELECT id FROM free_user
+SELECT user_id FROM free_user
 WHERE username = $1

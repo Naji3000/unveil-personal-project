@@ -52,10 +52,11 @@ class Register extends React.Component{
 
 
         return (
-
-            <div>
-                <Nav /> 
-        <main className='Register'>
+            <>
+            <Nav /> 
+            <div className='Register'>
+                
+            <main >
             
 
 
@@ -114,6 +115,8 @@ class Register extends React.Component{
             </div>
         </main>
             </div>
+
+            </>
         )
     }
 }

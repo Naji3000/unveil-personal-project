@@ -2,6 +2,8 @@ import React from 'react';
 import FeedNav from './FeedNav'
 import Pusher from 'pusher-js';
 import axios from 'axios'
+import Post from './Post'
+// import {connect} from 'react-redux'
 import './styles/feed.css'
 require('dotenv').config()
 
@@ -11,16 +13,18 @@ class Feed extends React.Component {
         super()
         this.state = {
             postTitle: '',
-            postInfo: '',
-            previousPost: '',
+            postDescription: '',
+            previousPosts: [],
             images: [],
             selectedFile: null,
+            loading: false
         
 
 
         }
     }
     componentDidMount() {
+        this.fetchPosts()
         this.setState({
         loading: true,
         });
@@ -71,6 +75,29 @@ class Feed extends React.Component {
         });
     };
 
+    //
+
+    updatePreviousPosts = postsArr => {
+        this.setState({previousPosts: postsArr});
+    }
+
+    fetchPosts = () => {
+        axios.get('/api/user/posts').then(response => {
+            this.setState({previousPosts: response.data})
+        })
+    }
+
+    handleClick = e => {
+        axios.post('/api/post', {
+            postDescription: this.state.postDescription,
+            postTitle: this.state.postTitle
+        })
+        this.fetchPosts();
+    }
+
+
+
+
     render(){
 
         const image = (url, index) => (
@@ -79,7 +106,9 @@ class Feed extends React.Component {
         const images = this.state.images.map((e, index) => image(e.secure_url, index));
 
 
-
+        const sortedArr = this.state.previousPosts.sort((a, b) => {
+            return a.post_id - b.post_id;
+        });
 
         return(
 
@@ -87,6 +116,32 @@ class Feed extends React.Component {
             <FeedNav />
             <div>
                 
+            <input placeholder="title" 
+                onChange={e => this.setState({postTitle: e.target.value})}
+                />
+                <textarea
+                onChange={e => this.setState({postDescription: e.target.value})}>
+
+                </textarea>
+                <button
+                onClick={this.handleClick}>Post!</button>
+                <div>
+                    {sortedArr.map(userPost => {
+                        return (
+                        <>
+                            <Post 
+                            postTitle={userPost.title} 
+                            postDescription={userPost.description}
+                            id={userPost.post_id}
+                            updatePreviousPosts={this.updatePreviousPosts}
+                            />
+                        </>
+                        )
+                    })}
+                </div>
+                
+
+
 
                 
             <form className='feed-form' method="post" onSubmit={this.uploadImage}>
@@ -117,11 +172,10 @@ class Feed extends React.Component {
     }
 }
 
+// function mapStateToProps(reduxState){
+//     return ({
+//         userId: reduxState.user.user_id
+//     })
+// }
+
 export default Feed;
-
-
-
-
-
-
-
