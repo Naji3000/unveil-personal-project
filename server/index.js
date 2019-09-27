@@ -74,23 +74,22 @@ app.get('/cloud/gallery', (req, res) => {
 app.post('/cloud/upload', multipartMiddleware, (req, res) => {
 
     cloudinary.v2.uploader.upload(req.files.image.path, {}, function(
-    error,
-    result
+
+        error,
+        result
     ) {
-    if (error) {
-        return res.status(500).send(error);
+        if (error) {
+            return res.status(500).send(error);
     }
-      // Save image to database
     db.insert(Object.assign({}, result, req.body), (err, newDoc) => {
-        if (err) {
-        return res.status(500).send(err);
-        }
-        //
-        pusher.trigger('gallery', 'upload', {
-        image: newDoc,
+            if (err) {
+                return res.status(500).send(err);
+            }
+                    pusher.trigger('gallery', 'upload', {
+                        image: newDoc,
+            });
+                            res.status(200).json(newDoc);
         });
-        res.status(200).json(newDoc);
-    });
     });
 });
 

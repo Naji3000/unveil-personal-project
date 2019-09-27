@@ -87,17 +87,19 @@ class Feed extends React.Component {
             <FeedNav />
             <div>
                 
-            <form method="post" onSubmit={this.uploadImage}>
+
+                
+            <form className='feed-form' method="post" onSubmit={this.uploadImage}>
 
                 <label className="label" htmlFor="gallery-image">
-                    Choose an image to upload
+                    Select an image to upload
                 </label>
             <input
                 className='file-change'
                 type="file"
                 onChange={this.fileChange}
                 id="gallery-image"
-                accept=".jpg, .jpeg, .png"
+                accept=".jpg, .jpeg, .png .gif"
             />
 
                 <button type='submit'>Upload!</button>
