@@ -65,7 +65,7 @@ app.post('/auth/login', loginUser)
 
 app.post('/api/post', addPost)
 app.get('/api/user/posts', getPreviousPosts)
-app.post('/api/post', getPost)
+app.get('/api/post', getPost)
 app.put('/api/post/:id', editPost)
 app.delete('/api/post/:id', deletePost)
 

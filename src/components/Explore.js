@@ -12,7 +12,7 @@ class Explore extends React.Component {
         }
     }
     
-    showPost = () => {
+    componentDidMount(){
         axios.get('/api/user/posts').then(res => {
             this.setState({post: res.data})
         })
