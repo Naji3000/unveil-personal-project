@@ -22,7 +22,8 @@ class Register extends React.Component{
             shouldRedirect: false,
             clickRegister: false,
             serverErrorMessage: "",
-            triedToClick: false
+            triedToClick: false,
+            isEmployer: false
         }
     }
 
@@ -49,7 +50,7 @@ class Register extends React.Component{
     }
 
     render(){
-
+                
 
         return (
             <>
@@ -63,6 +64,7 @@ class Register extends React.Component{
             <div className='container'>
                     Create Your Account 
 
+                
                     <Link  to='/employer'>
                     <button className='employer-button'>Employer</button>
                     </Link>
@@ -100,6 +102,7 @@ class Register extends React.Component{
                                                         <div className='input-pass'>
                                                             <input placeholder='Password'
                                                             name='password'
+                                                            type='password'
                                                             onChange={this.handleChange}/>
 
                                                         </div>

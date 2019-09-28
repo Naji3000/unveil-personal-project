@@ -1,12 +1,12 @@
 
 function addPost(req, res) {
-    const {postTitle, postDescription} = req.body
+    const {postTitle, postDescription, url} = req.body
     const db = req.app.get('db');
     console.log(req.body)
     db.getIdViaUsername(req.session.user.username).then(id => {
         console.log(id)
         let userId = id[0].user_id;
-        db.addPost(userId, postTitle, postDescription).then(() => {
+        db.addPost(userId, postTitle, postDescription, url).then(() => {
             res.sendStatus(200);
         })
     })

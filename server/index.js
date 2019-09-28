@@ -62,6 +62,9 @@ cloudinary.config({
 
 app.post('/auth/register', registerUser)
 app.post('/auth/login', loginUser)
+app.get("/auth/user", (req, res) => {
+    res.status(200).json(req.session.user);
+})
 
 app.post('/api/post', addPost)
 app.get('/api/user/posts', getPreviousPosts)

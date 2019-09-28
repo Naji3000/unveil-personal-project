@@ -3,6 +3,7 @@ import FeedNav from './FeedNav'
 import Pusher from 'pusher-js';
 import axios from 'axios'
 import Post from './Post'
+import Spinner from 'react-spinkit'
 // import {connect} from 'react-redux'
 import './styles/feed.css'
 require('dotenv').config()
@@ -18,9 +19,6 @@ class Feed extends React.Component {
             images: [],
             selectedFile: null,
             loading: false
-        
-
-
         }
     }
     componentDidMount() {
@@ -33,6 +31,8 @@ class Feed extends React.Component {
         this.setState({
             
             images: [...data, ...this.state.images],
+            loading: false
+
             
         });
         // console.log(this.state.images)
@@ -75,8 +75,6 @@ class Feed extends React.Component {
         });
     };
 
-    //
-
     updatePreviousPosts = postsArr => {
         this.setState({previousPosts: postsArr});
     }
@@ -96,8 +94,6 @@ class Feed extends React.Component {
     }
 
 
-
-
     render(){
 
         const image = (url, index) => (
@@ -105,50 +101,52 @@ class Feed extends React.Component {
         );
         const images = this.state.images.map((e, index) => image(e.secure_url, index));
 
-
         const sortedArr = this.state.previousPosts.sort((a, b) => {
             return a.post_id - b.post_id;
         });
+
 
         return(
 
             <>
             <FeedNav />
-            <div>
+            <section className='container-post'>
+                <div className='box-1'>
+
+            
+            <div className='post-text'>
                 
-            <input placeholder="title" 
-                onChange={e => this.setState({postTitle: e.target.value})}
-                />
-                <textarea
-                onChange={e => this.setState({postDescription: e.target.value})}>
+                <input placeholder="title" 
+                    onChange={e => this.setState({postTitle: e.target.value})}
+                    />
+                    <textarea
+                    onChange={e => this.setState({postDescription: e.target.value})}>
+    
+                    </textarea>
+                    {/* <button
+                    >Post!</button> */}
+                    <div>
+                        {sortedArr.map(userPost => {
+                            return (
+                            <>
+                                <Post 
+                                postTitle={userPost.title} 
+                                postDescription={userPost.description}
+                                id={userPost.post_id}
+                                updatePreviousPosts={this.updatePreviousPosts}
+                                />
+                            </>
+                            )
+                        })}
+            </div>
+            </div>
 
-                </textarea>
-                <button
-                onClick={this.handleClick}>Post!</button>
-                <div>
-                    {sortedArr.map(userPost => {
-                        return (
-                        <>
-                            <Post 
-                            postTitle={userPost.title} 
-                            postDescription={userPost.description}
-                            id={userPost.post_id}
-                            updatePreviousPosts={this.updatePreviousPosts}
-                            />
-                        </>
-                        )
-                    })}
-                </div>
-                
-
-
-
-                
             <form className='feed-form' method="post" onSubmit={this.uploadImage}>
 
                 <label className="label" htmlFor="gallery-image">
                     Select an image to upload
                 </label>
+
             <input
                 className='file-change'
                 type="file"
@@ -157,16 +155,19 @@ class Feed extends React.Component {
                 accept=".jpg, .jpeg, .png .gif"
             />
 
-                <button type='submit'>Upload!</button>
+                <button onClick={this.handleClick} type='submit'>Upload!</button>
             </form>
 
             <div>
-              {/* {this.state.loading ? <Spinner name="spinner" /> : ''} */}
+                {this.state.loading ? <Spinner name="spinner" /> : ''}
             </div>
 
             <div className='image-gallery'>{images}</div>
 
+
+
             </div>
+            </section>
             </>
         )
     }

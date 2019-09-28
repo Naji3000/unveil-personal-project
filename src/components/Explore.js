@@ -22,7 +22,7 @@ class Explore extends React.Component {
         return(
             <>
             <FeedNav />
-
+            <section>
                 <h1>Explore</h1>
                 {this.state.post.map((val, i) => {
                     return <Post 
@@ -31,6 +31,9 @@ class Explore extends React.Component {
                         postDescription={val.description}
                     />
                 })}
+
+            </section>
+
         
             </>
 
