@@ -22,8 +22,9 @@ class Explore extends React.Component {
         return(
             <>
             <FeedNav />
-            <section>
-                <h1>Explore</h1>
+            <section className='explore-container'>
+                {/* <h1>Explore</h1> */}
+                <div className='explore-box'>
                 {this.state.post.map((val, i) => {
                     return <Post 
                         key={i}
@@ -31,6 +32,8 @@ class Explore extends React.Component {
                         postDescription={val.description}
                     />
                 })}
+
+                </div>
 
             </section>
 

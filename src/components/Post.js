@@ -67,7 +67,6 @@ class Post extends React.Component {
                         <button
                         onClick={this.handleDelete}>Delete</button>
                 
-                    : 
                     {/* <button onClick>Change</button> */}
                 
             </div>

@@ -119,10 +119,10 @@ class Feed extends React.Component {
                 <input placeholder="title" 
                     onChange={e => this.setState({postTitle: e.target.value})}
                     />
-                    <textarea
+                    <input placeholder='info' 
                     onChange={e => this.setState({postDescription: e.target.value})}>
     
-                    </textarea>
+                    </input>
                     {/* <button
                     >Post!</button> */}
                     <div>
@@ -158,7 +158,7 @@ class Feed extends React.Component {
                 <button onClick={this.handleClick} type='submit'>Upload!</button>
             </form>
 
-            <div>
+            <div className='loading-indicator'>
                 {this.state.loading ? <Spinner name="spinner" /> : ''}
             </div>
 

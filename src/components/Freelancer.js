@@ -1,8 +1,10 @@
 import React from 'react';
 import axios from 'axios'
 import Post from './Post'
+import profileNav from './styles/profileNav.css'
 import {Link} from 'react-router-dom'
 import './styles/freelanceProfile.css'
+import ProfileNav from './profileNav';
 
 
 
@@ -22,6 +24,7 @@ class Freelancer extends React.Component {
     render(){
         return(
             <>
+            
             <section className='profile-container'>
                 
                 <div className='portfolio-name'>
@@ -33,6 +36,8 @@ class Freelancer extends React.Component {
                 </Link>
                 </div>
                 </div>
+                
+                <div>
                 {this.state.post.map((val, i) => {
                     return <Post 
                         key={i}
@@ -40,6 +45,8 @@ class Freelancer extends React.Component {
                         postDescription={val.description}
                     />
                 })}
+
+                </div>
             
 
 

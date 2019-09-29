@@ -1,0 +1,17 @@
+.explore-container {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.explore-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+    height:50vh;
+    width: 40vw;
+    margin-top: 100px;
+    border-radius: 20px;
+}
