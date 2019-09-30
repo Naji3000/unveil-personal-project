@@ -114,7 +114,7 @@ class Register extends React.Component{
 
 
 
-                        <h6>Already have an account? <Link to='/login'>
+                        <h6 className='account-option'>Already have an account? <Link  to='/login'>
                                 Sign in here </Link>
                         </h6>
             </div>

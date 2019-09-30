@@ -117,7 +117,7 @@ class Feed extends React.Component {
 
                 <div className='box-1'>
                     {/* <h3>post something</h3> */}
-
+                    
             <div className='post-text'>
                 
                 <input placeholder="Title" 
@@ -127,8 +127,7 @@ class Feed extends React.Component {
                     onChange={e => this.setState({postDescription: e.target.value})}>
     
                     </input>
-                    {/* <button
-                    >Post!</button> */}
+                    {/* <button>Post!</button> */}
                     
             </div>
 
@@ -154,7 +153,6 @@ class Feed extends React.Component {
             </div>
 
             <div className='image-gallery'>{images}</div>
-            </div>
             <div>
                         {sortedArr.map(userPost => {
                             return (
@@ -167,12 +165,9 @@ class Feed extends React.Component {
                                 />
                             </>
                             )
-                        })}
-
-                        
+                        })}     
             </div>
-
-
+            </div>
             </section>
             </>
         )

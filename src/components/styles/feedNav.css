@@ -7,7 +7,7 @@
 .title-nav{
     display: flex;
     justify-content: center;
-    color:black;
+    color:rgb(255, 255, 255);
     font-family: 'Permanent Marker', cursive;
     font-size: 30px;
 }
@@ -22,16 +22,13 @@
 
 .link-1{
     text-decoration: none;
-    color: black
+    color: rgb(255, 255, 255)
 }
 .link-2{
     text-decoration: none;
-    color: black
+    color: rgb(255, 255, 255)
 }
-.link-3{
-    text-decoration: none;
-    color: black
-}
+
 
 /* .hamburger-gif, .side-menu{
     display: none;

@@ -36,9 +36,6 @@ class FeedNav extends React.Component {
                         <Link className='link-2' to='/explore'>
                         <li>Explore</li>
                         </Link>
-                        <Link className='link-3' to='messages'>
-                        <li>Messages</li>
-                        </Link>
                     
                         <li className='hamburger-gif side-menu'>
                         {/* <img 
