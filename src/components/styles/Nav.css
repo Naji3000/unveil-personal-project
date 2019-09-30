@@ -17,7 +17,7 @@
     font-family: 'Permanent Marker', cursive;
     font-size: 80px;
     margin: 0;
-    animation: neon8 .5s infinite alternate;
+    animation: neon8 1.3s infinite alternate;
 }
 .slogan {
     display: flex;
@@ -25,8 +25,9 @@
     align-items: center;
     margin: 0;
     font-size: 27px;
-    color: rgb(2, 75, 94);
+    color: rgb(68, 169, 194);
     font-family: 'Rock Salt', cursive;
+    animation: neon10 1s infinite alternate;
 }
 
 @keyframes neon8 {
@@ -37,3 +38,11 @@
         text-shadow:  0 0 20px #d88bcf, 0 0 35px #d88bcf, 0 0 40px #000000, 0 0 50px #000000, 0 0 75px #000000;
     }
     }
+    @keyframes neon10 {
+        from {
+            text-shadow: 0 0 5px  0 0 40px #2f9ed1bb, 0 0 70px #2f9ed1bb, 0 0 80px #2f9ed1bb, 0 0 100px #2f9ed1bb, 0 0 150px #2f9ed1bb;
+        }
+        to {
+            text-shadow:  0 0 20px #2f9ed1bb, 0 0 35px #2f9ed1bb, 0 0 40px #2f9ed1bb, 0 0 50px #2f9ed1bb, 0 0 75px #2f9ed1bb;
+        }
+        }

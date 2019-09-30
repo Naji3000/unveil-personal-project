@@ -108,7 +108,7 @@ loginClick = () => {
                         </div>
 
                         <h6>Or connect with</h6>
-
+                        
                         <div className='google-button'>
 
                                 {
@@ -117,9 +117,11 @@ loginClick = () => {
                                 <div className='google-sign-in'>Signed In!</div>
 
                                 <div className='google-sign-out'>
+                                
                                 <button onClick={() => firebase.auth().signOut()}>Sign out!</button>
+                                    
                                 </div>
-                                <h4 className='google-greeting'>Welcome {firebase.auth().currentUser.displayName}</h4>
+                                <h3 className='google-greeting'>Welcome {firebase.auth().currentUser.displayName}</h3>
                             </span>
                             ) : (
                             <StyledFirebaseAuth

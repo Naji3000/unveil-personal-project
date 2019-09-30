@@ -83,7 +83,7 @@ class Register extends React.Component{
 
                                             <div className='input-email'>
                                                     <input 
-                                                    placeholder='email'
+                                                    placeholder='Email'
                                                     name='email'
                                                     onChange={this.handleChange}/>
                                             </div>
@@ -114,7 +114,7 @@ class Register extends React.Component{
 
 
 
-                        <h6 className='account-option'>Already have an account? <Link  to='/login'>
+                        <h6 className='account-option'>Already have an account? <Link className='login-link' to='/login'>
                                 Sign in here </Link>
                         </h6>
             </div>

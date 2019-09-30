@@ -41,7 +41,7 @@ class Employer extends React.Component{
 
             <div className='not-employer'>
 
-            <h6>Not looking for talent? <Link to='/'>Go Back</Link></h6>
+            <h5>Not looking for talent? <Link className='go-back' to='/'>Go Back</Link></h5>
 
             </div>
             

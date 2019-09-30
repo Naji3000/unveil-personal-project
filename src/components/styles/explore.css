@@ -12,7 +12,7 @@
     font-size: 40px;
     font-family: 'Rozha One', serif;
     animation: neon7 .5s infinite alternate;
-    color: azure
+    color: rgb(255, 255, 255)
     
 }
 .explore-box{
@@ -23,7 +23,10 @@
     height:70vh;
     width: 60vw;
     border-radius: 20px;
+    
 }
+
+
 
 @keyframes neon7 {
     from {

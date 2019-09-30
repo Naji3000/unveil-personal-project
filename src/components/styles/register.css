@@ -73,7 +73,13 @@
 }
 
 .account-option {
-    color: #c288c7
+    color: #c288c7;
+    
+}
+
+.login-link {
+    text-decoration: none;
+    color: #f7f7f7
 }
 
 

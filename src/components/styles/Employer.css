@@ -136,8 +136,14 @@ body {
 .not-employer{
     display: flex;
     justify-content: center;
+    color: #c288c7;
 }
 
+
+.go-back{
+    text-decoration: none;
+    color: rgb(255, 255, 255)
+}
 
 @keyframes neon6 {
 from {
