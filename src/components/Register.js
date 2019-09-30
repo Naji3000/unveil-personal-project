@@ -64,11 +64,6 @@ class Register extends React.Component{
             <div className='container'>
                     Create Your Account 
 
-                
-                    <Link  to='/employer'>
-                    <button className='employer-button'>Employer</button>
-                    </Link>
-
 
                 {this.state.triedToClick === true ? <h5>Please Fill In All Fields</h5> : null}
                 {/* {this.state.serverErrorMessage !== "" ? <h5>{this.state.serverErrorMessage}</h5> : null} */}
@@ -112,6 +107,13 @@ class Register extends React.Component{
                 <button className='register-button' onClick={this.registerClick}>Get Started</button>
                 </Link>
             </div>
+            <Link to='/employer'>
+                    <button className='employer-button'>Employer</button>
+            </Link>
+
+
+
+
                         <h6>Already have an account? <Link to='/login'>
                                 Sign in here </Link>
                         </h6>

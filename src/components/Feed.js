@@ -110,35 +110,26 @@ class Feed extends React.Component {
 
             <>
             <FeedNav />
+                <div className='News-feed-title'>
+                    <h1>NEWS FEED</h1>
+                </div>
             <section className='container-post'>
-                <div className='box-1'>
 
-            
+                <div className='box-1'>
+                    {/* <h3>post something</h3> */}
+
             <div className='post-text'>
                 
-                <input placeholder="title" 
+                <input placeholder="Title" 
                     onChange={e => this.setState({postTitle: e.target.value})}
                     />
-                    <input placeholder='info' 
+                    <input placeholder='Description' 
                     onChange={e => this.setState({postDescription: e.target.value})}>
     
                     </input>
                     {/* <button
                     >Post!</button> */}
-                    <div>
-                        {sortedArr.map(userPost => {
-                            return (
-                            <>
-                                <Post 
-                                postTitle={userPost.title} 
-                                postDescription={userPost.description}
-                                id={userPost.post_id}
-                                updatePreviousPosts={this.updatePreviousPosts}
-                                />
-                            </>
-                            )
-                        })}
-            </div>
+                    
             </div>
 
             <form className='feed-form' method="post" onSubmit={this.uploadImage}>
@@ -163,10 +154,25 @@ class Feed extends React.Component {
             </div>
 
             <div className='image-gallery'>{images}</div>
-
-
-
             </div>
+            <div>
+                        {sortedArr.map(userPost => {
+                            return (
+                            <>
+                                <Post 
+                                postTitle={userPost.title} 
+                                postDescription={userPost.description}
+                                id={userPost.post_id}
+                                updatePreviousPosts={this.updatePreviousPosts}
+                                />
+                            </>
+                            )
+                        })}
+
+                        
+            </div>
+
+
             </section>
             </>
         )

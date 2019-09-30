@@ -1,6 +1,10 @@
 body {
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgb(199, 148, 145) 0%, rgb(212, 155, 155) 35%, rgba(172, 92, 238, 0.651) 100%);
+    /* background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgb(199, 148, 145) 0%, rgb(212, 155, 155) 35%, rgba(172, 92, 238, 0.651) 100%); */
+    /* background-image: url('https://images.pexels.com/photos/2521470/pexels-photo-2521470.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'); */
+    background-image: url('https://images.pexels.com/photos/1387174/pexels-photo-1387174.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    /* background-image: url('https://free-images.com/lg/ea4b/music_amplifier_sound_equipment.jpg')  */
+    /* background-image: url('https://free-images.com/lg/95ec/music_kiss_rock_heavy.jpg') */
 }
 .employer{
         display: flex;

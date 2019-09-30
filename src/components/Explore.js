@@ -21,9 +21,13 @@ class Explore extends React.Component {
     render(){
         return(
             <>
-            <FeedNav />
+            {/* <FeedNav /> */}
+
             <section className='explore-container'>
-                {/* <h1>Explore</h1> */}
+                <div className='explore-tab'>
+                <h1>Explore</h1>
+
+                </div>
                 <div className='explore-box'>
                 {this.state.post.map((val, i) => {
                     return <Post 

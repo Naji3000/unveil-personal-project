@@ -1,17 +1,35 @@
 .explore-container {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
     height: 100vh;
     width: 100vw;
 }
-
+.explore-tab{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    font-family: 'Rozha One', serif;
+    animation: neon7 .5s infinite alternate;
+    color: azure
+    
+}
 .explore-box{
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: antiquewhite;
-    height:50vh;
-    width: 40vw;
-    margin-top: 100px;
+    height:70vh;
+    width: 60vw;
     border-radius: 20px;
 }
+
+@keyframes neon7 {
+    from {
+        text-shadow: 0 0 5px  0 0 40px #ee68dc, 0 0 70px #ee68dc, 0 0 80px #ee68dc, 0 0 100px #ee68dc, 0 0 150px #ee68dc;
+    }
+    to {
+        text-shadow:  0 0 20px #ee68dc, 0 0 35px #ee68dc, 0 0 40px #ee68dc, 0 0 50px #ee68dc, 0 0 75px #ee68dc;
+    }
+    }

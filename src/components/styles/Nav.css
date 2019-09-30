@@ -13,10 +13,11 @@
 .title{
     display: flex;
     justify-content: center;
-    color:black;
+    color:rgb(255, 255, 255);
     font-family: 'Permanent Marker', cursive;
     font-size: 80px;
     margin: 0;
+    animation: neon8 .5s infinite alternate;
 }
 .slogan {
     display: flex;
@@ -24,6 +25,15 @@
     align-items: center;
     margin: 0;
     font-size: 27px;
-    color: rgb(10, 10, 10);
+    color: rgb(2, 75, 94);
     font-family: 'Rock Salt', cursive;
 }
+
+@keyframes neon8 {
+    from {
+        text-shadow: 0 0 5px  0 0 40px #000000, 0 0 70px #000000, 0 0 80px #000000, 0 0 100px #000000, 0 0 150px #000000;
+    }
+    to {
+        text-shadow:  0 0 20px #d88bcf, 0 0 35px #d88bcf, 0 0 40px #000000, 0 0 50px #000000, 0 0 75px #000000;
+    }
+    }
