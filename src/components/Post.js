@@ -43,11 +43,11 @@ class Post extends React.Component {
                         defaultValue={this.props.postTitle}
                         onChange={e => this.setState({inputFieldText: e.target.value})}
                         />
-                        <textarea
+                        <input
                         onChange={(e) => this.setState({textArea: e.target.value})}
                         defaultValue={this.props.post}
                         >
-                        </textarea>
+                        </input>
                     </>
                 }
                 

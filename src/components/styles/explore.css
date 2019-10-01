@@ -19,7 +19,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: antiquewhite;
+    flex-direction: column;
+    background-color: rgba(77, 194, 223, 0.568);
     height:70vh;
     width: 60vw;
     border-radius: 20px;

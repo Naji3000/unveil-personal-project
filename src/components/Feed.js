@@ -116,57 +116,59 @@ class Feed extends React.Component {
             <section className='container-post'>
 
                 <div className='box-1'>
-                    {/* <h3>post something</h3> */}
+                    <h4>What's on your mind?</h4>
                     
             <div className='post-text'>
                 
-                <input placeholder="Title" 
-                    onChange={e => this.setState({postTitle: e.target.value})}
-                    />
-                    <input placeholder='Description' 
-                    onChange={e => this.setState({postDescription: e.target.value})}>
-    
-                    </input>
-                    {/* <button>Post!</button> */}
+                    <input className='input-title' placeholder="Title" 
+                        onChange={e => this.setState({postTitle: e.target.value})}
+                        />
+                        <input placeholder='Description' 
+                        onChange={e => this.setState({postDescription: e.target.value})}>
+        
+                        </input>
+                        {/* <button>Post!</button> */}
                     
             </div>
 
             <form className='feed-form' method="post" onSubmit={this.uploadImage}>
 
-                <label className="label" htmlFor="gallery-image">
-                    Select an image to upload
-                </label>
+                    <label className="label" htmlFor="gallery-image">
+                        Select an image to upload
+                    </label>
 
-            <input
-                className='file-change'
-                type="file"
-                onChange={this.fileChange}
-                id="gallery-image"
-                accept=".jpg, .jpeg, .png .gif"
-            />
+                            <input
+                                className='file-change'
+                                type="file"
+                                onChange={this.fileChange}
+                                id="gallery-image"
+                                accept=".jpg, .jpeg, .png .gif"
+                            />
 
-                <button onClick={this.handleClick} type='submit'>Upload!</button>
+                            <button onClick={this.handleClick} type='submit'>Upload!</button>
             </form>
+
 
             <div className='loading-indicator'>
                 {this.state.loading ? <Spinner name="spinner" /> : ''}
             </div>
 
+                                            <div>
+                                                        {sortedArr.map(userPost => {
+                                                            return (
+                                                            <>
+                                                                <Post 
+                                                                postTitle={userPost.title} 
+                                                                postDescription={userPost.description}
+                                                                id={userPost.post_id}
+                                                                updatePreviousPosts={this.updatePreviousPosts}
+                                                                />
+                                                            </>
+                                                            )
+                                                        })}     
+                                            </div>
+
             <div className='image-gallery'>{images}</div>
-            <div>
-                        {sortedArr.map(userPost => {
-                            return (
-                            <>
-                                <Post 
-                                postTitle={userPost.title} 
-                                postDescription={userPost.description}
-                                id={userPost.post_id}
-                                updatePreviousPosts={this.updatePreviousPosts}
-                                />
-                            </>
-                            )
-                        })}     
-            </div>
             </div>
             </section>
             </>
