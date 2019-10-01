@@ -25,7 +25,7 @@ class Explore extends React.Component {
 
             <section className='explore-container'>
                 <div className='explore-tab'>
-                <h1>Explore</h1>
+                <h1>EXPLORE</h1>
 
                 </div>
                 <div className='explore-box'>

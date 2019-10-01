@@ -1,5 +1,6 @@
 import React from "react";
-
+import {updateUser} from '../redux/reducers/userReducer'
+import {connect} from 'react-redux'
 import axios from "axios";
 
 class Post extends React.Component {
@@ -74,4 +75,10 @@ class Post extends React.Component {
     }
 }
 
-export default Post;
+const mapStateToProps = reduxState => {
+    return {
+        user: reduxState.userReducer.user_id
+    }
+}
+
+export default connect(mapStateToProps, {updateUser}) (Post)

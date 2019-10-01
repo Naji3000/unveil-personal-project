@@ -29,7 +29,7 @@ class Freelancer extends React.Component {
     render(){
         return(
             <>
-                    <h1 className='profile-title'>Profile</h1>
+                    <h1 className='profile-title'>PROFILE</h1>
             
             <section className='profile-container'>
                 

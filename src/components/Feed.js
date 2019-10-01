@@ -4,8 +4,9 @@ import Pusher from 'pusher-js';
 import axios from 'axios'
 import Post from './Post'
 import Spinner from 'react-spinkit'
-// import {connect} from 'react-redux'
 import './styles/feed.css'
+import {updateUser} from '../redux/reducers/userReducer'
+import {connect} from 'react-redux'
 require('dotenv').config()
 
 
@@ -87,8 +88,8 @@ class Feed extends React.Component {
 
     handleClick = e => {
         axios.post('/api/post', {
-            postDescription: this.state.postDescription,
-            postTitle: this.state.postTitle
+            postTitle: this.state.postTitle,
+            postDescription: this.state.postDescription
         })
         this.fetchPosts();
     }
@@ -152,8 +153,8 @@ class Feed extends React.Component {
             <div className='loading-indicator'>
                 {this.state.loading ? <Spinner name="spinner" /> : ''}
             </div>
-
-                                            <div>
+            
+                                            <div className='text-info'>
                                                         {sortedArr.map(userPost => {
                                                             return (
                                                             <>
@@ -176,10 +177,10 @@ class Feed extends React.Component {
     }
 }
 
-// function mapStateToProps(reduxState){
-//     return ({
-//         userId: reduxState.user.user_id
-//     })
-// }
+const mapStateToProps = reduxState => {
+    return {
+        user: reduxState.userReducer.user
+    }
+}
 
-export default Feed;
+export default connect(mapStateToProps, {updateUser}) (Feed)
