@@ -8,7 +8,7 @@
 }
 .explore-tab{
     display: flex;
-    /* justify-content: center; */
+    justify-content: center;
     font-size: 50px;
     font-family: 'Alfa Slab One', cursive;
     animation: neon7 .5s infinite alternate;
@@ -23,7 +23,7 @@
     flex-direction: column;
     background-color: rgba(77, 194, 223, 0.411);
     height:70vh;
-    width: 60vw;
+    width: 50vw;
     border-radius: 20px;
     
 }

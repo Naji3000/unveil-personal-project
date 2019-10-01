@@ -3,7 +3,7 @@ import './styles/feedNav.css'
 import {Link} from 'react-router-dom'
 
 
-class FeedNav extends React.Component {
+class feedNav extends React.Component {
     constructor(){
         super()
         this.state = {
@@ -57,4 +57,4 @@ class FeedNav extends React.Component {
     }
 }
 
-export default FeedNav;
+export default feedNav;

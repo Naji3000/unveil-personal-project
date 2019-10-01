@@ -4,7 +4,7 @@ import Post from './Post'
 import profileNav from './styles/profileNav.css'
 import {Link} from 'react-router-dom'
 import './styles/freelanceProfile.css'
-import ProfileNav from './profileNav';
+import ProfileNav from './ProfileNav';
 
 
 
@@ -29,19 +29,13 @@ class Freelancer extends React.Component {
     render(){
         return(
             <>
+            <ProfileNav />
                     <h1 className='profile-title'>PROFILE</h1>
             
             <section className='profile-container'>
                 
                 <div className='portfolio-name'>
-
-
-                
-                <div>
-                <Link to='/feed'>
-                <button> News Feed </button>
-                </Link>
-                </div>
+                    
                         <div>
                         {this.state.post.map((val, i) => {
                             return <Post 
