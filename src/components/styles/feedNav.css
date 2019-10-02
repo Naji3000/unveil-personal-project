@@ -17,6 +17,8 @@
     display: flex;
     justify-content: space-between;
     width: 20vw;
+    font-family: 'Kalam', cursive;
+    font-size: 25px
 }
 
 .link-1{
@@ -87,8 +89,8 @@ img  {
 
 
 
-@media (max-width: 650px) {
-    li {
+@media (max-width: 700px) {
+    li{
         display: none;
     }
     .hamburger-gif {

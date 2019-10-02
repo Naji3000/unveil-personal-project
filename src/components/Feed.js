@@ -117,14 +117,14 @@ class Feed extends React.Component {
             <section className='container-post'>
 
                 <div className='box-1'>
-                    <h4>What's on your mind?</h4>
+                    <h4 className='On-your-mind'>What's on your mind?</h4>
                     
             <div className='post-text'>
                 
                     <input className='input-title' placeholder="Title" 
                         onChange={e => this.setState({postTitle: e.target.value})}
                         />
-                        <input placeholder='Description' 
+                        <input className='input-description' placeholder='Description' 
                         onChange={e => this.setState({postDescription: e.target.value})}>
         
                         </input>

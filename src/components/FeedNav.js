@@ -40,7 +40,7 @@ class feedNav extends React.Component {
                         <li className='hamburger-gif side-menu'>
                         <img 
                         onClick={this.toggle}
-                        src ="https://cdn.dribbble.com/users/1011558/screenshots/4615892/hamburger-03.gif" 
+                        src ="https://cdn.dribbble.com/users/1052821/screenshots/2606897/hamburger_menu.gif" 
                         alt='burger'
                         />
                         </li>
