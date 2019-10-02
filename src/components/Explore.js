@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios'
-import FeedNav from './FeedNav'
+import ExploreNav from './ExploreNav'
 import Post from './Post'
 import './styles/explore.css'
 
@@ -21,6 +21,7 @@ class Explore extends React.Component {
     render(){
         return(
             <>
+            <ExploreNav />
             {/* <FeedNav /> */}
 
             <section className='explore-container'>

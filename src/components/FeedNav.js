@@ -38,20 +38,19 @@ class feedNav extends React.Component {
                         </Link>
                     
                         <li className='hamburger-gif side-menu'>
-                        {/* <img 
+                        <img 
                         onClick={this.toggle}
                         src ="https://cdn.dribbble.com/users/1011558/screenshots/4615892/hamburger-03.gif" 
                         alt='burger'
-                        /> */}
+                        />
                         </li>
                     </ul>
                 </div>
             </nav>
-            {/* <div className={`${this.state.menuOpenStatus} side-menu`} >
-            <li>Feed</li>
+            <div className={`${this.state.menuOpenStatus} side-menu`} >
+            <li>Profile`</li>
             <li>Explore</li>
-            <li>Messages</li>
-            </div> */}
+            </div>
             </>
         )
     }

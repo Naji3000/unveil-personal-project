@@ -29,14 +29,17 @@
 }
 
 
-/* .hamburger-gif, .side-menu{
-    display: none;
-} 
 
-.side-div, .side-div, .side-menu,.side-menu-open, .side-menu-close {
+.hamburger-gif, .side-menu{
+    display: none;
+}
+
+
+
+div.side-menu,.side-menu-open, .side-menu-close {
     width: 400px;
     height: 100vh;
-    background: rgb(98, 179, 179);
+    background: goldenrod;
     position: fixed;
     top: 0;
     left: 0;
@@ -55,7 +58,7 @@
 .side-menu-close{
     display: block;
     animation: close 1s forwards ease;
-} 
+}
 
 @keyframes open {
     to {
@@ -83,11 +86,12 @@ img  {
 
 
 
-@media (max-width: 970px) {
-    .link-1, .link-2, .link-3{
+
+@media (max-width: 650px) {
+    li {
         display: none;
     }
     .hamburger-gif {
         display: block
     }
-} */
+}

@@ -1,0 +1,29 @@
+.Explore-Nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-explore {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 30px;
+}
+
+.explore-menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    width: 10vw;
+}
+
+.feed-explore{
+    text-decoration: none;
+    color: white
+}
+.profile-link{
+    text-decoration: none;
+    color: white
+}

@@ -20,6 +20,7 @@
     align-items: center;
     border-radius: 10px; 
     flex-direction: column;
+    text-align: center;
     background-color: rgba(77, 193, 223, 0.473);
     height: 60vh;
     width: 50vw;
