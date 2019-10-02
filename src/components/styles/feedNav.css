@@ -38,15 +38,16 @@
 
 
 
-div.side-menu,.side-menu-open, .side-menu-close {
+div.side-menu, .side-menu-open, .side-menu-close {
     width: 400px;
     height: 100vh;
-    background: goldenrod;
+    background: rgba(7, 100, 128, 0.836);
     position: fixed;
     top: 0;
     left: 0;
-    box-shadow: 3px 3px 3px 2px rgb(129, 129, 120);
+    
     transform: translateX(-610px);
+    
     font-size: 13px;
     
 }
@@ -69,11 +70,8 @@ div.side-menu,.side-menu-open, .side-menu-close {
 }
 @keyframes close {
     to {
-        transform: translateX(0px)
-    }
-    from {
         transform: translateX(-610px)
-    }
+}
 }
 
 

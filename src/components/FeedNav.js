@@ -14,10 +14,10 @@ class feedNav extends React.Component {
     }
 
     toggle= () => {
-        if(this.state.menuOpenStatus === 'side-menu-close' || this.state.menuOpenStatus === 'side-menu'){
-            this.setState({menuOpenStatus: 'side-menu-open'})
-        }else if (this.state.menuOpenStatus === 'side-menu-open'){
-            this.setState({menuOpenStatus: 'side-menu-close'})
+        if(this.state.menuStatusOpen === 'side-menu-close' || this.state.menuStatusOpen === 'side-menu'){
+            this.setState({menuStatusOpen: 'side-menu-open'})
+        }else if (this.state.menuStatusOpen === 'side-menu-open'){
+            this.setState({menuStatusOpen: 'side-menu-close'})
         }
     }
 
@@ -47,9 +47,9 @@ class feedNav extends React.Component {
                     </ul>
                 </div>
             </nav>
-            <div className={`${this.state.menuOpenStatus} side-menu`} >
-            <li>Profile`</li>
-            <li>Explore</li>
+            <div className={`${this.state.menuStatusOpen} side-menu`} >
+            <h1>Profile</h1>
+            <h1>Explore</h1>
             </div>
             </>
         )

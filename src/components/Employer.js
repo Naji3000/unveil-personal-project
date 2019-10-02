@@ -7,6 +7,7 @@ class Employer extends React.Component{
     constructor(){
         super()
         this.state = {
+            previousPosts: []
 
         }
     }
