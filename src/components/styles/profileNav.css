@@ -81,11 +81,14 @@ div.slide-menu, .slide-menu-open, .slide-menu-close {
 
 
 img  {
-    width: 45px;
-    height: 40px;
+    display: flex;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
     cursor: pointer;
+    border-radius: 5px;
+    filter: invert(1)
 }
-
 
 
 
