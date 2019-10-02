@@ -9,7 +9,8 @@
     justify-content: center;
     color: white;
     font-family: 'Permanent Marker', cursive;
-    font-size: 30px;
+    font-size: 20px;
+    text-decoration: none
 }
 
 .menu {
@@ -23,9 +24,76 @@
 
 .feed-link{
     text-decoration: none;
-    color: white
+    color: white;
 }
+
 .explore-link{
     text-decoration: none;
     color: white
+}
+
+
+
+.burger-gif, .slide-menu{
+    display: none;
+}
+
+
+
+div.slide-menu, .slide-menu-open, .slide-menu-close {
+    width: 400px;
+    height: 100vh;
+    background: #df996bbd;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-radius: 15px;
+    transform: translateX(-610px);
+    font-size: 13px;
+    
+}
+.slide-menu-open{
+    display: block;
+    animation-name: open;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+}
+.slide-menu-close{
+    display: block;
+    animation: close 1s forwards ease;
+}
+
+
+@keyframes open {
+    to {
+        transform: translateX(0px)
+    }
+}
+@keyframes close {
+    to {
+        transform: translateX(-610px)
+}
+}
+
+
+
+
+
+img  {
+    width: 45px;
+    height: 40px;
+    cursor: pointer;
+}
+
+
+
+
+@media (max-width: 700px) {
+    li{
+        display: none;
+    }
+    .burger-gif {
+        display: block
+    }
 }

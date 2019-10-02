@@ -20,7 +20,7 @@ body {
 }
 .button-1 {
     display: block flex;
-    width: 80%;
+    width: 50%;
     border: 2px;
     border-radius: 15px;
     /* background-image: url(""); */
@@ -32,24 +32,11 @@ body {
     margin-bottom: 30px
 }
 
-.button-2 {
-    display: block flex;
-    width: 80%;
-    border: 2px;
-    border-radius: 15px;
-    /* background-image: url(""); */
-    padding: 14px 28px;
-    cursor: pointer;
-    font-size: 30px;
-    color: rgb(0, 0, 0);
-    font-family: 'Alfa Slab One', cursive;
-    margin-bottom: 30px
-}
 .button-3 {
     display: block flex;
-    width: 80%;
+    width: 50%;
     border: 2px;
-    border-radius: 15px;
+    border-radius: 20px;
     /* background-image: url(""); */
     padding: 14px 28px;
     cursor: pointer;
@@ -60,61 +47,22 @@ body {
 }
 .button-4 {
     display: block flex;
-    width: 80%;
+    width: 50%;
     border: 2px;
-    border-radius: 15px;
+    border-radius: 20px;
     /* background-image: url(""); */
     padding: 14px 28px;
     cursor: pointer;
     font-size: 30px;
-    color: rgb(0, 0, 0);
+    background-color: rgba(47, 178, 201, 0.527);
     font-family: 'Alfa Slab One', cursive;
     margin-bottom: 30px
 }
 .button-5 {
     display: block flex;
-    width: 80%;
+    width: 50%;
     border: 2px;
-    border-radius: 15px;
-    /* background-image: url(""); */
-    padding: 14px 28px;
-    cursor: pointer;
-    font-size: 30px;
-    color: rgb(0, 0, 0);
-    font-family: 'Alfa Slab One', cursive;
-    margin-bottom: 30px
-}
-.button-6 {
-    display: block flex;
-    width: 80%;
-    border: 2px;
-    border-radius: 15px;
-    /* background-image: url(""); */
-    padding: 14px 28px;
-    cursor: pointer;
-    font-size: 30px;
-    color: rgb(0, 0, 0);
-    font-family: 'Alfa Slab One', cursive;
-    margin-bottom: 30px
-}
-.button-7 {
-    display: block flex;
-    width: 80%;
-    border: 2px;
-    border-radius: 15px;
-    /* background-image: url(""); */
-    padding: 14px 28px;
-    cursor: pointer;
-    font-size: 30px;
-    color: rgb(0, 0, 0);;
-    font-family: 'Alfa Slab One', cursive;
-    margin-bottom: 30px
-}
-.button-8 {
-    display: block flex;
-    width: 80%;
-    border: 2px;
-    border-radius: 15px;
+    border-radius: 20px;
     /* background-image: url(""); */
     padding: 14px 28px;
     cursor: pointer;

@@ -41,10 +41,11 @@
 div.side-menu, .side-menu-open, .side-menu-close {
     width: 400px;
     height: 100vh;
-    background: rgba(7, 100, 128, 0.836);
+    background: #df996bbd;
     position: fixed;
     top: 0;
     left: 0;
+    border-radius: 15px;
     
     transform: translateX(-610px);
     
@@ -75,19 +76,17 @@ div.side-menu, .side-menu-open, .side-menu-close {
 }
 
 
-
-
-
 img  {
-    width: 40px;
+    width: 45px;
     height: 40px;
     cursor: pointer;
+    border-radius: 10px
 }
 
 
 
 
-@media (max-width: 700px) {
+@media (max-width: 550px) {
     li{
         display: none;
     }

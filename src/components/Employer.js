@@ -26,13 +26,9 @@ class Employer extends React.Component{
                 <Link className='buttons' to='/explore'>
                     
                 <button className="button-1">Audio Engineer</button>
-                <button className="button-2">Music Artist</button>
                 <button className="button-3">Film Composer</button>
                 <button className="button-4">Game Designer</button>
                 <button className="button-5">Sound Designer</button>
-                <button className="button-6">Director</button>
-                <button className="button-7">Music Producer</button>
-                <button className="button-8">Film Producer</button>
             
 
                 </Link>

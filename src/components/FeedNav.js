@@ -47,9 +47,13 @@ class feedNav extends React.Component {
                     </ul>
                 </div>
             </nav>
-            <div className={`${this.state.menuStatusOpen} side-menu`} >
-            <h1>Profile</h1>
-            <h1>Explore</h1>
+            <div className={`${this.state.menuStatusOpen} side-menu`}>
+                <Link to='/user'>
+                    <h1>Profile</h1>
+                </Link>
+                <Link to='/explore'>
+                    <h1>Explore</h1>
+                </Link>
             </div>
             </>
         )
