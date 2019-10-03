@@ -9,7 +9,9 @@
     justify-content: center;
     color: white;
     font-family: 'Permanent Marker', cursive;
-    font-size: 30px;
+    font-size: 20px;
+    text-decoration: none
+    
 }
 
 .explore-menu {
@@ -28,4 +30,97 @@
 .profile-link{
     text-decoration: none;
     color: white
+}
+
+
+.ham-gif, .the-slide {
+    display: none;
+}
+
+div.the-slide, .the-slide-open, .the-slide-close {
+    width: 250px;
+    height: 100vh;
+    background: #4d4a48bb;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-radius: 15px;
+    transform: translateX(-610px);
+    font-size: 13px;
+}
+
+.the-slide-open{
+    display: block;
+    animation-name: open;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+}
+.the-slide-close{
+    display: block;
+    animation-name: close;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out
+}
+
+
+.the-slide-link {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Kalam', cursive;
+    font-size: 20px;
+    margin-top: 80px;
+    text-decoration: none;
+    color: rgb(157, 227, 229)
+}
+
+.the-slide-link-2 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Kalam', cursive;
+    font-size: 20px;
+    text-decoration: none;
+    color: rgb(204, 113, 8);
+    margin-top: 70px;
+    
+}
+
+
+@keyframes open {
+    to {
+        transform: translateX(0px)
+    }
+}
+@keyframes close {
+    to {
+        transform: translateX(-610px)
+}
+}
+
+
+
+
+
+img  {
+    display: flex;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border-radius: 5px;
+    filter: invert(1)
+}
+
+
+
+@media (max-width: 700px) {
+    li{
+        display: none;
+    }
+    .ham-gif {
+        display: block
+    }
 }

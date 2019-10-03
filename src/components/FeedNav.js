@@ -26,7 +26,9 @@ class feedNav extends React.Component {
             <>
             <nav className='Nav-menu'>
                 <div>
-                    <h1 className='title-nav'>unveil</h1>
+                    <Link className='title-nav' to='/'>
+                            <h1 >unveil</h1>
+                    </Link>
                 </div>
                 <div className="side-div">
                     <ul className='menu-list'>
@@ -48,10 +50,10 @@ class feedNav extends React.Component {
                 </div>
             </nav>
             <div className={`${this.state.menuStatusOpen} side-menu`}>
-                <Link to='/user'>
+                <Link className='side-menu-link' to='/user'>
                     <h1>Profile</h1>
                 </Link>
-                <Link to='/explore'>
+                <Link className='side-menu-link-2' to='/explore'>
                     <h1>Explore</h1>
                 </Link>
             </div>

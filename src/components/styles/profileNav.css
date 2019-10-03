@@ -41,9 +41,9 @@
 
 
 div.slide-menu, .slide-menu-open, .slide-menu-close {
-    width: 400px;
+    width: 250px;
     height: 100vh;
-    background: #df996bbd;
+    background: #4d4a48bb;
     position: fixed;
     top: 0;
     left: 0;
@@ -61,8 +61,34 @@ div.slide-menu, .slide-menu-open, .slide-menu-close {
 }
 .slide-menu-close{
     display: block;
-    animation: close 1s forwards ease;
+    animation-name: close;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out
 }
+
+.slide-link{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Kalam', cursive;
+    font-size: 20px;
+    margin-top: 80px;
+    text-decoration: none;
+    color: rgb(157, 227, 229)
+}
+
+.slide-link-2{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Kalam', cursive;
+    font-size: 20px;
+    text-decoration: none;
+    color: rgb(204, 113, 8);
+    margin-top: 70px;
+}
+
 
 
 @keyframes open {

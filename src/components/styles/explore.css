@@ -3,13 +3,13 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 80vh;
+    height: 82vh;
     width: 100vw;
 }
 .explore-tab{
     display: flex;
     justify-content: center;
-    font-size: 40px;
+    font-size: 43px;
     font-family: 'Alfa Slab One', cursive;
     animation: neon7 .5s infinite alternate;
     width: 100vw;

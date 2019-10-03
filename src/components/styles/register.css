@@ -2,19 +2,13 @@
 .Register {
     display: flex;
     justify-content: center;
-    /* background-image: url("https://www.actorsconnection.com/wp-content/uploads/2015/11/acting-action-actor-275200.jpg"); */
-    /* background: no-repeat; */
-    /* background-size: 100vw 103vh;
-    margin-top: -23vh;
-    height: 103vh;
-     */
-    
 }
 .container{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin: 0;
+    /* justify-content: center; */
+    margin-top: 100px;
+    color: white;
     /* background-color: transparent; */
     height: 55vh;
     width: 100vw;
@@ -34,28 +28,115 @@
     
     
 }
-.input-first {
-    margin-top: 10px;
-    margin-bottom: 5px;
-    
+
+.input-first{   
+    width: 200px;
+    height: 20px;  
+    font-family: 'Bitter', serif;
+    font-size: 20px;    
+    background-color: transparent;
+    border: none;
+    border-top: 2px solid #4EA5D9;    
+    border-bottom: 2px solid #4EA5D9;
+    outline: none;
+    color: #4EA5D9;
+    font-size:18px;
+    font-weight:normal;
+    transition:0.2s ease all; 
 }
+
+.input-first:focus:valid {
+    top:-20px;
+    font-size:14px;
+    color:rgb(193, 117, 223);
+}
+
+
 .input-last {
-    margin-top: 10px;
-    margin-bottom: 5px
+    margin-top: 15px;
+    width: 200px;
+    height: 20px;  
+    font-family: 'Bitter', serif;
+    font-size: 20px;    
+    background-color: transparent;
+    border: none;
+    border-top: 2px solid #4EA5D9;    
+    border-bottom: 2px solid #4EA5D9;
+    outline: none;
+    color: #4EA5D9;
+    font-size:18px;
+    font-weight:normal;
+    transition:0.2s ease all; 
+}
+.input-last:focus:valid {
+    top:-20px;
+    font-size:14px;
+    color:rgb(193, 117, 223);
 }
 
 .input-email{
-    margin-top: 10px;
-    margin-bottom: 5px
+    margin-top: 15px;
+    width: 200px;
+    height: 20px;  
+    font-family: 'Bitter', serif;
+    font-size: 20px;    
+    background-color: transparent;
+    border: none;
+    border-top: 2px solid #4EA5D9;    
+    border-bottom: 2px solid #4EA5D9;
+    outline: none;
+    color: #4EA5D9;
+    font-size:18px;
+    font-weight:normal;
+    transition:0.2s ease all; 
+}
+.input-email:focus:valid {
+    top:-20px;
+    font-size:14px;
+    color:rgb(193, 117, 223);
 }
 
 .input-user{
-    margin-top: 10px;
-    margin-bottom: 5px
+    margin-top: 15px;
+    width: 200px;
+    height: 20px;  
+    font-family: 'Bitter', serif;
+    font-size: 20px;    
+    background-color: transparent;
+    border: none;
+    border-top: 2px solid #4EA5D9;    
+    border-bottom: 2px solid #4EA5D9;
+    outline: none;
+    color: #4EA5D9;
+    font-size:18px;
+    font-weight:normal;
+    transition:0.2s ease all; 
+}
+.input-user:focus:valid {
+    top:-20px;
+    font-size:14px;
+    color:rgb(193, 117, 223);
 }
 .input-pass{
-    margin-top: 10px;
-    margin-bottom: 5px
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 200px;
+    height: 20px;  
+    font-family: 'Bitter', serif;
+    font-size: 20px;    
+    background-color: transparent;
+    border: none;
+    border-top: 2px solid #4EA5D9;    
+    border-bottom: 2px solid #4EA5D9;
+    outline: none;
+    color: #4EA5D9;
+    font-weight: normal;
+    transition:0.2s ease all; 
+}
+.input-pass:focus:valid {
+    top:-20px;
+    font-size:14px;
+    color:rgb(193, 117, 223);
 }
 
 .register-button{

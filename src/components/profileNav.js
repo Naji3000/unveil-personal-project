@@ -51,9 +51,15 @@ class ProfileNav extends React.Component {
                     </ul>
                 </div>
             </nav>
-            <div className={`${this.state.menuOpenStatus} slide-menu`} >
-            <h1>Profile</h1>
-            <h1>Explore</h1>
+            <div className={`${this.state.menuOpenStatus} slide-menu`}>
+
+                <Link  className ='slide-link' to ='/feed'>
+                    <h1>Feed</h1>
+                </Link>
+
+                <Link className = 'slide-link-2' to ='/explore'>
+                    <h1>Explore</h1>
+                </Link>
             </div>
             
             </>

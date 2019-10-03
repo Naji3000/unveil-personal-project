@@ -62,40 +62,53 @@ class Register extends React.Component{
 
 
             <div className='container'>
-                    Create Your Account 
+                    {/* Create Your Account  */}
 
 
                 {this.state.triedToClick === true ? <h5>Please Fill In All Fields</h5> : null}
                 {/* {this.state.serverErrorMessage !== "" ? <h5>{this.state.serverErrorMessage}</h5> : null} */}
-                    <div className='input-first'>
-                            <input 
-                            placeholder='First Name'
-                            name="firstName"
-                            onChange={this.handleChange}/>
+                
+                    <div >    
+                        <input 
+                        className='input-first'
+                        type="text" 
+                        name='fistName' 
+                        placeholder='First Name'
+                        onChange={this.handleChange}/>  
                     </div>
 
-                                <div className='input-last'>
+
+
+                                <div >
                                     <input 
+                                    className='input-last'
+                                    type="text" 
                                     placeholder='Last Name'
                                     name="lastName"
                                     onChange={this.handleChange}/>
                                 </div>
 
-                                            <div className='input-email'>
+                                            <div >
                                                     <input 
+                                                    className='input-email'
+                                                    type="text" 
                                                     placeholder='Email'
                                                     name='email'
                                                     onChange={this.handleChange}/>
                                             </div>
 
-                                                        <div className='input-user'>
+                                                        <div >
                                                             <input 
+                                                            className='input-user'
+                                                            type="text" 
                                                             placeholder='Username'
                                                             name='username'
                                                             onChange={this.handleChange}/>
                                                         </div>
-                                                        <div className='input-pass'>
-                                                            <input placeholder='Password'
+                                                        <div >
+                                                            <input 
+                                                            className='input-pass'
+                                                            placeholder='Password'
                                                             name='password'
                                                             type='password'
                                                             onChange={this.handleChange}/>
