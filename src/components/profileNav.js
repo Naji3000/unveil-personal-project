@@ -1,5 +1,6 @@
 import React from 'react';
 import '../components/styles/profileNav.css'
+import axios from 'axios'
 import {Link} from 'react-router-dom'
 
 
@@ -20,6 +21,10 @@ class ProfileNav extends React.Component {
             this.setState({menuOpenStatus:'slide-menu-close'})
         }
     }
+    // logoutUser = () => {
+    //     axios.post('/auth/logout')
+
+    // }
 
     render(){
         return(
@@ -38,6 +43,9 @@ class ProfileNav extends React.Component {
                         </Link>
                         <Link className='explore-link' to='/explore'>
                         <li>Explore</li>
+                        </Link>
+                        <Link className='logout-link'  to ='/'>
+                        <li>Logout</li>
                         </Link>
 
                         <li className='burger-gif slide-menu'>

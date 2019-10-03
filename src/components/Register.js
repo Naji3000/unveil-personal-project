@@ -34,6 +34,7 @@ class Register extends React.Component{
     }
 
     registerClick = () => {
+        console.log('hittt!!!')
         const {firstName, lastName, email, username, password} = this.state
         if(firstName !== "" && lastName !== "" && email !== "" && username !== "" && password !== ""){
             axios.post('/auth/register', {firstName, lastName, email, username, password}).then(response => {
@@ -43,8 +44,10 @@ class Register extends React.Component{
             })
             .catch(err => {
                 this.setState({serverErrorMessage: err.response.data.error})
+                console.log(err)
             })
         }else {
+            console.log('registerClick Else')
             this.setState({triedToClick: true})
         }
     }

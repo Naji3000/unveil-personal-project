@@ -32,6 +32,11 @@
     color: white
 }
 
+.logout-link{
+    text-decoration: none;
+    color: white
+}
+
 
 
 .burger-gif, .slide-menu{
@@ -88,6 +93,7 @@ div.slide-menu, .slide-menu-open, .slide-menu-close {
     color: rgb(204, 113, 8);
     margin-top: 70px;
 }
+
 
 
 

@@ -58,10 +58,15 @@ function loginUser(req,res) {
         })
     })
 }
+// function logoutUser (req, res) {
+//     req.session.destroy();
+//     res.sendStatus(200);
+// }
 
 
 
 module.exports = {
     registerUser,
-    loginUser
+    loginUser,
+    // logoutUser
 }
