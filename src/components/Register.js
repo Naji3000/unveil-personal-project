@@ -34,7 +34,7 @@ class Register extends React.Component{
     }
 
     registerClick = () => {
-        console.log('hittt!!!')
+        console.log(this.state)
         const {firstName, lastName, email, username, password} = this.state
         if(firstName !== "" && lastName !== "" && email !== "" && username !== "" && password !== ""){
             axios.post('/auth/register', {firstName, lastName, email, username, password}).then(response => {
@@ -75,7 +75,7 @@ class Register extends React.Component{
                         <input 
                         className='input-first'
                         type="text" 
-                        name='fistName' 
+                        name='firstName' 
                         placeholder='First Name'
                         onChange={this.handleChange}/>  
                     </div>
@@ -119,8 +119,8 @@ class Register extends React.Component{
                                                         </div>
 
             <div>
-                <Link to='/user'>
-                <button className='register-button' onClick={this.registerClick}>Get Started</button>
+                <Link onClick={this.registerClick} to='/user'>
+                <button className='register-button' >Get Started</button>
                 </Link>
             </div>
             <Link to='/employer'>

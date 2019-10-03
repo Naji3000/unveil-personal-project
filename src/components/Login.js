@@ -99,8 +99,8 @@ loginClick = () => {
                                         </div>
                         
 
-                        <Link className='login-button' to='/user'>
-                        <button onClick={this.loginClick}>Login</button>
+                        <Link  onClick={this.loginClick} className='login-button' to='/user'>
+                        <button>Login</button>
                         </Link>
         
                         <div className='register-text'>

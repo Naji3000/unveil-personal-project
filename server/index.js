@@ -8,8 +8,8 @@ const cloudinary = require('cloudinary');
 const cors = require('cors');
 const Datastore = require('nedb');
 const Pusher = require('pusher')
-const {registerUser, loginUser} = require('./controllers/authController')
-const {addPost, getPost, getPreviousPosts, editPost, deletePost} = require('./controllers/postController')
+const {registerUser, loginUser,logoutUser} = require('./controllers/authController')
+const {addPost, getPost, getAllPost, getPreviousPosts, editPost, deletePost} = require('./controllers/postController')
 const {CONNECTION_STRING, SESSION_SECRET} = process.env
 
 //express app
@@ -62,12 +62,18 @@ cloudinary.config({
 
 app.post('/auth/register', registerUser)
 app.post('/auth/login', loginUser)
+app.post('/auth/logout', logoutUser)
 app.get("/auth/user", (req, res) => {
     res.status(200).json(req.session.user);
 })
 
 app.post('/api/post', addPost)
 app.get('/api/user/posts', getPreviousPosts)
+
+
+app.get('/api/user/allPost', getAllPost)
+
+
 app.get('/api/post', getPost)
 app.put('/api/post/:id', editPost)
 app.delete('/api/post/:id', deletePost)

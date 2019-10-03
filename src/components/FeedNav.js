@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios'
 import './styles/feedNav.css'
 import {Link} from 'react-router-dom'
 
@@ -20,6 +21,10 @@ class feedNav extends React.Component {
             this.setState({menuStatusOpen: 'side-menu-close'})
         }
     }
+    logoutUser = () => {
+        axios.post('/auth/logout')
+
+    }
 
     render(){
         return(
@@ -37,6 +42,9 @@ class feedNav extends React.Component {
                         </Link>
                         <Link className='link-2' to='/explore'>
                         <li>Explore</li>
+                        </Link>
+                        <Link onClick={this.logoutUser} className='logout-link-2'  to ='/'>
+                        <li>Logout</li>
                         </Link>
                     
                         <li className='hamburger-gif side-menu'>

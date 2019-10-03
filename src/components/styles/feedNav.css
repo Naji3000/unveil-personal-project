@@ -34,6 +34,11 @@
     color: rgb(255, 255, 255)
 }
 
+.logout-link-2{
+    text-decoration: none;
+    color: white
+}
+
 
 
 .hamburger-gif, .side-menu{

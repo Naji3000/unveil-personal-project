@@ -2,13 +2,16 @@ import React from 'react';
 import axios from 'axios'
 import ExploreNav from './ExploreNav'
 import Post from './Post'
+import {updateUser} from '../redux/reducers/userReducer'
+import {connect} from 'react-redux'
 import './styles/explore.css'
 
 class Explore extends React.Component {
     constructor(){
         super()
         this.state = {
-            post: []
+            post: [],
+            allPost: []
         }
     }
     
@@ -16,9 +19,19 @@ class Explore extends React.Component {
         axios.get('/api/user/posts').then(res => {
             this.setState({post: res.data})
         })
+            this.allPost();
     }
+            allPost = () => {
+                axios.get('/api/user/allPost').then (res => {
+                    console.log(res)
+                    this.setState({allPost: res.data})
+
+                })
+            }
+    
 
     render(){
+        
         return(
             <>
             <ExploreNav />
@@ -50,6 +63,12 @@ class Explore extends React.Component {
     }
 }
 
-export default Explore
+const mapStateToProps = (reduxState) => {
+    return {
+        user: reduxState.userReducer.user
+    }
+}
+
+export default connect(mapStateToProps, {updateUser})(Explore)
 
 

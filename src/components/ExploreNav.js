@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios'
 import './styles/exploreNav.css'
 import {Link} from 'react-router-dom'
 
@@ -21,6 +22,11 @@ class ExploreNav extends React.Component {
         }
     }
 
+    logoutUser = () => {
+        axios.post('/auth/logout')
+
+    }
+
     render(){
         return(
             <>
@@ -38,6 +44,9 @@ class ExploreNav extends React.Component {
                         </Link>
                         <Link className='profile-link' to='/user'>
                         <li>Profile</li>
+                        </Link>
+                        <Link onClick={this.logoutUser} className='logout-link-3'  to ='/'>
+                        <li>Logout</li>
                         </Link>
 
                         <li className='ham-gif the-slide'>

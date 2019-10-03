@@ -19,6 +19,13 @@ function getPost (req, res) {
     })
 }
 
+function getAllPost (req,res) {
+    const db = req.app.get('db')
+    db.getAllPost().then(posts => {
+        res.status(200).json(posts)
+    })
+}
+
 function getPreviousPosts(req, res) {
     const db = req.app.get('db')
     db.getPreviousPosts(req.session.user.username).then(posts => {
@@ -59,6 +66,7 @@ module.exports = {
     addPost,
     getPreviousPosts,
     getPost,
+    getAllPost,
     editPost,
     deletePost
 }

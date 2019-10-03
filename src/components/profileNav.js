@@ -21,10 +21,10 @@ class ProfileNav extends React.Component {
             this.setState({menuOpenStatus:'slide-menu-close'})
         }
     }
-    // logoutUser = () => {
-    //     axios.post('/auth/logout')
+    logoutUser = () => {
+        axios.post('/auth/logout')
 
-    // }
+    }
 
     render(){
         return(
@@ -44,7 +44,7 @@ class ProfileNav extends React.Component {
                         <Link className='explore-link' to='/explore'>
                         <li>Explore</li>
                         </Link>
-                        <Link className='logout-link'  to ='/'>
+                        <Link onClick={this.logoutUser} className='logout-link'  to ='/'>
                         <li>Logout</li>
                         </Link>
 
