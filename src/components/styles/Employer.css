@@ -23,11 +23,12 @@ body {
     width: 50%;
     border: 2px;
     border-radius: 15px;
+    color: white;
     /* background-image: url(""); */
     padding: 14px 28px;
     cursor: pointer;
     font-size: 30px;
-    color: rgb(0, 0, 0);
+    background-color: rgba(47, 178, 201, 0.527);
     font-family: 'Alfa Slab One', cursive;
     margin-bottom: 30px
 }
@@ -37,11 +38,12 @@ body {
     width: 50%;
     border: 2px;
     border-radius: 20px;
+    color: white;
     /* background-image: url(""); */
     padding: 14px 28px;
     cursor: pointer;
     font-size: 30px;
-    color: rgb(0, 0, 0);
+    background-color: rgba(47, 178, 201, 0.527);
     font-family: 'Alfa Slab One', cursive;
     margin-bottom: 30px
 }
@@ -50,6 +52,7 @@ body {
     width: 50%;
     border: 2px;
     border-radius: 20px;
+    color: white;
     /* background-image: url(""); */
     padding: 14px 28px;
     cursor: pointer;
@@ -63,11 +66,12 @@ body {
     width: 50%;
     border: 2px;
     border-radius: 20px;
+    color: white;
     /* background-image: url(""); */
     padding: 14px 28px;
     cursor: pointer;
     font-size: 30px;
-    color: rgb(0, 0, 0);
+    background-color: rgba(47, 178, 201, 0.527);
     font-family: 'Alfa Slab One', cursive;
     margin-bottom: 30px
 }

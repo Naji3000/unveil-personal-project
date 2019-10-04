@@ -112,7 +112,7 @@ div.side-menu, .side-menu-open, .side-menu-close {
 }
 
 
-img  {
+.burger-button {
     display: flex;
     justify-content: center;
     width: 80px;

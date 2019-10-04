@@ -16,10 +16,11 @@ class Feed extends React.Component {
         this.state = {
             postTitle: '',
             postDescription: '',
+            feedPic: '',
             previousPosts: [],
-            images: [],
+            // images: [],
             selectedFile: null,
-            loading: false
+            loading: null
         }
     }
     componentDidMount() {
@@ -28,53 +29,54 @@ class Feed extends React.Component {
         loading: true,
         });
 
-        axios.get('/cloud/gallery').then(({ data }) => {
-        this.setState({
+    //     axios.get('/cloud/gallery').then(({ data }) => {
+    //     this.setState({
             
-            images: [...data, ...this.state.images],
-            loading: false
+    //         images: [...data, ...this.state.images],
+    //         loading: false
 
             
-        });
-        // console.log(this.state.images)
-        });
+    //     });
+    //     // console.log(this.state.images)
+    //     });
 
-        const pusher = new Pusher({
-            key: process.env.PUSHER_APP_KEY,
-            cluster: process.env.PUSHER_APP_CLUSTER,
-            encrypted: true,
-        });
+    //     const pusher = new Pusher({
+    //         key: process.env.PUSHER_APP_KEY,
+    //         cluster: process.env.PUSHER_APP_CLUSTER,
+    //         encrypted: true,
+    //     });
 
-        const channel = pusher.subscribe('gallery');
-            channel.bind('upload', data => {
-            this.setState({
-                images: [data.image, ...this.state.images],
-            });
-        });
-    }
+    //     const channel = pusher.subscribe('gallery');
+    //         channel.bind('upload', data => {
+    //         this.setState({
+    //             images: [data.image, ...this.state.images],
+    //         });
+    //     });
+    // }
 
-    fileChange = event => {
-        const file = event.target.files[0];
-        this.setState({ selectedFile: file });
+    // fileChange = event => {
+    //     const file = event.target.files[0];
+    //     this.setState({ selectedFile: file });
+    // };
+
+    // uploadImage = event => {
+    //     event.preventDefault();
+
+    //     if (!this.state.selectedFile) return;
+    //     const formData = new FormData();
+    //         formData.append(
+    //         'image',
+    //         this.state.selectedFile,
+    //         this.state.selectedFile.name
+    //     );
+
+    //     axios.post('/cloud/upload', formData).then(({ data }) => {
+    //     this.setState({
+    //         loading: false,
+    //     });
+    //     });
     };
 
-    uploadImage = event => {
-        event.preventDefault();
-
-        if (!this.state.selectedFile) return;
-        const formData = new FormData();
-            formData.append(
-            'image',
-            this.state.selectedFile,
-            this.state.selectedFile.name
-        );
-
-        axios.post('/cloud/upload', formData).then(({ data }) => {
-        this.setState({
-            loading: false,
-        });
-        });
-    };
 
     updatePreviousPosts = postsArr => {
         this.setState({previousPosts: postsArr});
@@ -89,26 +91,42 @@ class Feed extends React.Component {
     handleClick = e => {
         axios.post('/api/post', {
             postTitle: this.state.postTitle,
-            postDescription: this.state.postDescription
+            postDescription: this.state.postDescription,
+            feedPic: this.state.feedPic
         })
         this.fetchPosts();
     }
 
+    // showWidget = (widget) => {
+    //     widget.open()
+
+    // }
+
+    checkUploadedPic = (event, resultEvent) => {
+        if(resultEvent.event === 'success'){
+            this.setState({feedPic: resultEvent.info.url})
+        }
+    }
 
     render(){
 
-        const image = (url, index) => (
-            <img alt="" className="photo" key={`image-${index} }`} src={url} />
-        );
-        const images = this.state.images.map((e, index) => image(e.secure_url, index));
+        var widget = window.cloudinary.createUploadWidget({ 
+            cloudName: "ddxmzokt6", 
+            uploadPreset: "Unveil-upload",
+            sources: ["local", "url", "dropbox", "facebook", "instagram"]},
+            (error, result) => { this.checkUploadedPic(error, result)});
+
+        
+            
+        
+        // const images = this.state.images.map((e, index) => image(e.secure_url, index));
 
         const sortedArr = this.state.previousPosts.sort((a, b) => {
             return a.post_id - b.post_id;
         });
-
+        {console.log(this.state)}
 
         return(
-
             <>
             <FeedNav />
                 <div className='News-feed-title'>
@@ -128,11 +146,13 @@ class Feed extends React.Component {
                         onChange={e => this.setState({postDescription: e.target.value})}>
         
                         </input>
-                        {/* <button>Post!</button> */}
+                        <button onClick={()=> widget.open()}>select image!</button>
+                        <button onClick={this.handleClick} >Post!</button>
+                        <img alt="" className="photo" src={this.state.feedPic} />
                     
             </div>
 
-            <form className='feed-form' method="post" onSubmit={this.uploadImage}>
+            {/* <form className='feed-form' method="post" onSubmit={this.uploadImage}>
 
                     <label className="label" htmlFor="gallery-image">
                         Select an image to upload
@@ -146,8 +166,8 @@ class Feed extends React.Component {
                                 accept=".jpg, .jpeg, .png .gif"
                             />
 
-                            <button onClick={this.handleClick} type='submit'>Upload!</button>
-            </form>
+                            <button  type='submit'>Upload!</button>
+            </form> */}
 
 
             <div className='loading-indicator'>
@@ -161,6 +181,7 @@ class Feed extends React.Component {
                                                                 <Post 
                                                                 postTitle={userPost.title} 
                                                                 postDescription={userPost.description}
+                                                                feedPic = {userPost.feedPic}
                                                                 id={userPost.post_id}
                                                                 updatePreviousPosts={this.updatePreviousPosts}
                                                                 />
@@ -169,7 +190,7 @@ class Feed extends React.Component {
                                                         })}     
                                             </div>
 
-            <div className='image-gallery'>{images}</div>
+            {/* <div className='image-gallery'>{images}</div> */}
             </div>
             </section>
             </>

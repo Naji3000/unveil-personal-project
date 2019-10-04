@@ -108,7 +108,7 @@ div.the-slide, .the-slide-open, .the-slide-close {
 
 
 
-img  {
+.burger-button-2  {
     display: flex;
     justify-content: center;
     width: 60px;

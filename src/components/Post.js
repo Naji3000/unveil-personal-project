@@ -9,7 +9,8 @@ class Post extends React.Component {
         this.state = {
             inEditStatus: false,
             inputFieldText: "",
-            textArea: ""
+            textArea: "",
+            feedPic: ''
         }
     }
     handleClick = e => {

@@ -50,6 +50,7 @@ class ProfileNav extends React.Component {
 
                         <li className='burger-gif slide-menu'>
                         <img 
+                        className='burger-button-3'
                         onClick={this.toggle}
                         src ="https://i2.wp.com/menupatterns.com/wp-content/uploads/2016/10/hamburger_icon_animation.gif?zoom=2.625&resize=374%2C338" 
                         alt='burger'

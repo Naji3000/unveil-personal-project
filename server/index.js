@@ -4,10 +4,10 @@ const session = require('express-session');
 const massive = require('massive')
 const multipart = require('connect-multiparty');
 const bodyParser = require('body-parser');
-const cloudinary = require('cloudinary');
+// const cloudinary = require('cloudinary');
 const cors = require('cors');
 const Datastore = require('nedb');
-const Pusher = require('pusher')
+// const Pusher = require('pusher')
 const {registerUser, loginUser,logoutUser} = require('./controllers/authController')
 const {addPost, getPost, getAllPost, getPreviousPosts, editPost, deletePost} = require('./controllers/postController')
 const {CONNECTION_STRING, SESSION_SECRET} = process.env
@@ -43,19 +43,19 @@ massive(CONNECTION_STRING)
     console.log("database_connect")
 })
 
-const pusher = new Pusher({
-    appId: process.env.PUSHER_APP_ID,
-    key: process.env.PUSHER_APP_KEY,
-    secret: process.env.PUSHER_APP_SECRET,
-    cluster: process.env.PUSHER_APP_CLUSTER,
-    encrypted: true,
-});
+// const pusher = new Pusher({
+//     appId: process.env.PUSHER_APP_ID,
+//     key: process.env.PUSHER_APP_KEY,
+//     secret: process.env.PUSHER_APP_SECRET,
+//     cluster: process.env.PUSHER_APP_CLUSTER,
+//     encrypted: true,
+// });
 
-cloudinary.config({
-    cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
-    api_key: process.env.CLOUDINARY_API_KEY,
-    api_secret: process.env.CLOUDINARY_API_SECRET,
-});
+// cloudinary.config({
+//     cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+//     api_key: process.env.CLOUDINARY_API_KEY,
+//     api_secret: process.env.CLOUDINARY_API_SECRET,
+// });
 
 
 //endpoints
@@ -81,30 +81,30 @@ app.delete('/api/post/:id', deletePost)
 
 //cloudinary endpoints
 
-app.get('/cloud/gallery', (req, res) => {
-    db.find({}, (err, data) => {
-    if (err) return res.status(500).send(err);
-    res.json(data);
-    });
-});
+// app.get('/cloud/gallery', (req, res) => {
+//     db.find({}, (err, data) => {
+//     if (err) return res.status(500).send(err);
+//     res.json(data);
+//     });
+// });
 
-app.post('/cloud/upload', multipartMiddleware, (req, res) => {
-    cloudinary.v2.uploader.upload(req.files.image.path, {}, function(error,result) {
+// app.post('/cloud/upload', multipartMiddleware, (req, res) => {
+//     cloudinary.v2.uploader.upload(req.files.image.path, {}, function(error,result) {
 
-        if (error) {
-            return res.status(500).send(error);
-    } 
-    db.insert(Object.assign({}, result, req.body), (err, newDoc) => {
-            if (err) {
-                return res.status(500).send(err);
-            }
-                    pusher.trigger('gallery', 'upload', {
-                        image: newDoc,
-            });
-                            res.status(200).json(newDoc);
-        });
-    });
-});
+//         if (error) {
+//             return res.status(500).send(error);
+//     } 
+//     db.insert(Object.assign({}, result, req.body), (err, newDoc) => {
+//             if (err) {
+//                 return res.status(500).send(err);
+//             }
+//                     pusher.trigger('gallery', 'upload', {
+//                         image: newDoc,
+//             });
+//                             res.status(200).json(newDoc);
+//         });
+//     });
+// });
 
 
 
