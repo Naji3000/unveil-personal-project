@@ -1,6 +1,6 @@
 import React from 'react';
 import FeedNav from './FeedNav'
-import Pusher from 'pusher-js';
+// import Pusher from 'pusher-js';
 import axios from 'axios'
 import Post from './Post'
 import Spinner from 'react-spinkit'
@@ -124,7 +124,7 @@ class Feed extends React.Component {
         const sortedArr = this.state.previousPosts.sort((a, b) => {
             return a.post_id - b.post_id;
         });
-        {console.log(this.state)}
+        // {console.log(this.state)}
 
         return(
             <>
@@ -146,8 +146,10 @@ class Feed extends React.Component {
                         onChange={e => this.setState({postDescription: e.target.value})}>
         
                         </input>
-                        <button onClick={()=> widget.open()}>select image!</button>
-                        <button onClick={this.handleClick} >Post!</button>
+
+                        <button onClick={()=> widget.open()}>Select image!</button>
+                        <button className='post-button' onClick={this.handleClick} >Post!</button>
+
                         <img alt="" className="photo" src={this.state.feedPic} />
                     
             </div>
@@ -179,10 +181,10 @@ class Feed extends React.Component {
                                                             return (
                                                             <>
                                                                 <Post 
+                                                                id={userPost.post_id}
                                                                 postTitle={userPost.title} 
                                                                 postDescription={userPost.description}
-                                                                feedPic = {userPost.feedPic}
-                                                                id={userPost.post_id}
+                                                                feedPic = {userPost.url}
                                                                 updatePreviousPosts={this.updatePreviousPosts}
                                                                 />
                                                             </>

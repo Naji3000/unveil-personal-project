@@ -2,11 +2,11 @@ require('dotenv').config();
 const express = require('express')
 const session = require('express-session');
 const massive = require('massive')
-const multipart = require('connect-multiparty');
+// const multipart = require('connect-multiparty');
 const bodyParser = require('body-parser');
 // const cloudinary = require('cloudinary');
 const cors = require('cors');
-const Datastore = require('nedb');
+// const Datastore = require('nedb');
 // const Pusher = require('pusher')
 const {registerUser, loginUser,logoutUser} = require('./controllers/authController')
 const {addPost, getPost, getAllPost, getPreviousPosts, editPost, deletePost} = require('./controllers/postController')
@@ -14,7 +14,7 @@ const {CONNECTION_STRING, SESSION_SECRET} = process.env
 
 //express app
 const app = express()
-const db = new Datastore()
+// const db = new Datastore()
 
 //middleware
 
@@ -23,6 +23,7 @@ app.use(express.json())
 app.use(cors())
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
+
 app.use(session({
     resave: false,
     saveUninitialized: true,
@@ -33,7 +34,7 @@ app.use(session({
 }))
 
 //multiparty
-const multipartMiddleware = multipart();
+// const multipartMiddleware = multipart();
 
 
 
@@ -60,6 +61,7 @@ massive(CONNECTION_STRING)
 
 //endpoints
 
+//user
 app.post('/auth/register', registerUser)
 app.post('/auth/login', loginUser)
 app.post('/auth/logout', logoutUser)
@@ -67,16 +69,18 @@ app.get("/auth/user", (req, res) => {
     res.status(200).json(req.session.user);
 })
 
+//post
 app.post('/api/post', addPost)
 app.get('/api/user/posts', getPreviousPosts)
-
-
-app.get('/api/user/allPost', getAllPost)
-
-
 app.get('/api/post', getPost)
 app.put('/api/post/:id', editPost)
 app.delete('/api/post/:id', deletePost)
+
+
+//employer
+app.get('/api/user/allPost', getAllPost)
+
+
 
 
 //cloudinary endpoints
