@@ -22,7 +22,7 @@
     flex-direction: column;
     text-align: center;
     background-color: rgba(77, 193, 223, 0.473);
-    height: 60vh;
+    height: 70vh;
     width: 50vw;
     /* justify-content: center; */
     overflow: scroll;
@@ -73,6 +73,7 @@
 
 .text-info {
     color: white;
+    margin-bottom: 30px;
 
 }
 
