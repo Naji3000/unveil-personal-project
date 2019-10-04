@@ -40,6 +40,7 @@ class Freelancer extends React.Component {
                         {this.state.post.map((val, i) => {
                             return <Post 
                                 key={i}
+                                feedPic ={val.url}
                                 postTitle={val.title}
                                 postDescription={val.description}
                             />

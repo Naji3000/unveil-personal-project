@@ -22,7 +22,7 @@
     flex-direction: column;
     text-align: center;
     background-color: rgba(77, 193, 223, 0.473);
-    height: 70vh;
+    height: 68vh;
     width: 50vw;
     /* justify-content: center; */
     overflow: scroll;
@@ -63,12 +63,14 @@
 
 .input-title{
     margin-bottom: 10px;
-    height: 20px
+    height: 20px;
+    border-radius: 10px;
 }
 .input-description{
     margin-bottom: 30px;
     height: 40px;
-    width: 200px
+    width: 200px;
+    border-radius: 10px;
 }
 
 .text-info {
