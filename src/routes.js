@@ -6,7 +6,7 @@ import Employer from './components/Employer'
 import Freelancer from './components/Freelancer'
 import Explore from './components/Explore'
 import Feed from './components/Feed'
-import Messages from './components/Messages'
+import Exp from './components/Exp'
 
 export default (
     <Switch>
@@ -15,7 +15,7 @@ export default (
         <Route path='/user' component={Freelancer}/>
         <Route path='/explore' component={Explore}/>
         <Route path='/feed' component={Feed}/>
-        <Route path='/messages' component={Messages}/>
+        <Route path='/scout' component={Exp}/>
         <Route exact path='/' component={Register}/>
         <Route />
     </Switch>

@@ -1,0 +1,42 @@
+.exp-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 82vh;
+    width: 100vw;
+}
+.exp-tab{
+    display: flex;
+    justify-content: center;
+    font-size: 43px;
+    font-family: 'Alfa Slab One', cursive;
+    animation: neon20 .5s infinite alternate;
+    width: 100vw;
+    /* color: rgb(255, 255, 255) */
+    
+}
+.exp-box{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    background-color: rgba(77, 194, 223, 0.473);
+    height:70vh;
+    width: 50vw;
+    border-radius: 20px;
+}
+
+
+
+@keyframes neon20 {
+    from {
+        text-shadow: 0 0 5px  0 0 40px #ee68dc, 0 0 70px #ee68dc, 0 0 80px #ee68dc, 0 0 100px #ee68dc, 0 0 150px #ee68dc;
+    }
+    to {
+        text-shadow:  0 0 20px #ee68dc, 0 0 35px #ee68dc, 0 0 40px #ee68dc, 0 0 50px #ee68dc, 0 0 75px #ee68dc;
+    }
+    }
+
+
+    

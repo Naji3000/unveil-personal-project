@@ -38,8 +38,10 @@
     font-size: 20px;    
     background-color: transparent;
     border: none;
-    border-top: 2px solid #4EA5D9;    
+    border-top: 2px solid #4EA5D9; 
+    /* border-top: 2px solid rgb(217, 134, 78);  */    
     border-bottom: 2px solid #4EA5D9;
+    /* border-bottom: 2px solid rgb(217, 134, 78);  */
     outline: none;
     color: #4EA5D9;
     font-size:18px;
@@ -62,8 +64,10 @@
     font-size: 20px;    
     background-color: transparent;
     border: none;
-    border-top: 2px solid #4EA5D9;    
+    border-top: 2px solid #4EA5D9; 
+    /* border-top: 2px solid rgb(217, 134, 78);  */       
     border-bottom: 2px solid #4EA5D9;
+    /* border-bottom: 2px solid rgb(217, 134, 78);  */
     outline: none;
     color: #4EA5D9;
     font-size:18px;
@@ -84,8 +88,10 @@
     font-size: 20px;    
     background-color: transparent;
     border: none;
-    border-top: 2px solid #4EA5D9;    
+    border-top: 2px solid #4EA5D9;
+    /* border-top: 2px solid rgb(217, 134, 78);  */    
     border-bottom: 2px solid #4EA5D9;
+    /* border-bottom: 2px solid rgb(217, 134, 78);  */
     outline: none;
     color: #4EA5D9;
     font-size:18px;
@@ -106,8 +112,10 @@
     font-size: 20px;    
     background-color: transparent;
     border: none;
-    border-top: 2px solid #4EA5D9;    
+    border-top: 2px solid #4EA5D9;   
+    /* border-top: 2px solid rgb(217, 134, 78);    */
     border-bottom: 2px solid #4EA5D9;
+    /* border-bottom: 2px solid rgb(217, 134, 78);  */
     outline: none;
     color: #4EA5D9;
     font-size:18px;
@@ -128,13 +136,16 @@
     font-size: 20px;    
     background-color: transparent;
     border: none;
-    border-top: 2px solid #4EA5D9;    
+    border-top: 2px solid #4EA5D9;
+    /* border-top: 2px solid rgb(217, 134, 78);    */    
     border-bottom: 2px solid #4EA5D9;
+    /* border-bottom: 2px solid rgb(217, 134, 78);  */
     outline: none;
     color: #4EA5D9;
     font-weight: normal;
     transition:0.2s ease all; 
 }
+
 .input-pass:focus:valid {
     top:-20px;
     font-size:14px;

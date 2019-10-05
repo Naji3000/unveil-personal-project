@@ -7,7 +7,7 @@ class Employer extends React.Component{
     constructor(){
         super()
         this.state = {
-            previousPosts: []
+        
 
         }
     }
@@ -23,7 +23,7 @@ class Employer extends React.Component{
 
             <div>
                 
-                <Link className='buttons' to='/explore'>
+                <Link className='buttons' to='/scout'>
                     
                 <button className="button-1">Audio Engineer</button>
                 <button className="button-3">Film Composer</button>

@@ -1,12 +1,13 @@
 import React from 'react';
 import axios from 'axios'
-import ExploreNav from './ExploreNav'
 import Post from './Post'
 import {updateUser} from '../redux/reducers/userReducer'
 import {connect} from 'react-redux'
-import './styles/explore.css'
+import './styles/exp.css'
+import ExploreNav from './ExploreNav'
+import ExpNav from './ExpNav';
 
-class Explore extends React.Component {
+class Exp extends React.Component {
     constructor(){
         super()
         this.state = {
@@ -16,35 +17,35 @@ class Explore extends React.Component {
     }
     
     componentDidMount(){
-        axios.get('/api/user/posts').then(res => {
-            this.setState({post: res.data})
-        })
-            // this.allPost();
+        // axios.get('/api/user/posts').then(res => {
+        //     this.setState({post: res.data})
+        // })
+            this.allPost();
     }
-            // allPost = () => {
-            //     axios.get('/api/user/allPost').then (res => {
-            //         console.log(res)
-            //         this.setState({allPost: res.data})
+            allPost = () => {
+                axios.get('/api/user/allPost').then (res => {
+                    console.log(res)
+                    this.setState({allPost: res.data})
 
-            //     })
-            // }
+                })
+            }
     
 
     render(){
         
         return(
             <>
+            {/* <ExpNav /> */}
             <ExploreNav />
             {/* <FeedNav /> */}
 
-            <section className='explore-container'>
-                <div className='explore-tab'>
+            <section className='exp-container'>
+                <div className='exp-tab'>
                 <h1>EXPLORE</h1>
 
                 </div>
-                <div className='explore-box'>
-                    <h1>Put something here</h1>
-                {this.state.post.map((val, i) => {
+                <div className='exp-box'>
+                {this.state.allPost.map((val, i) => {
                     return <Post 
                         key={i}
                         feedPic={val.url}
@@ -71,6 +72,4 @@ const mapStateToProps = (reduxState) => {
     }
 }
 
-export default connect(mapStateToProps, {updateUser})(Explore)
-
-
+export default connect(mapStateToProps, {updateUser})(Exp)
