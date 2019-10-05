@@ -115,8 +115,8 @@ div.side-menu, .side-menu-open, .side-menu-close {
 .burger-button {
     display: flex;
     justify-content: center;
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
     cursor: pointer;
     border-radius: 5px;
     filter: invert(1)
@@ -126,7 +126,7 @@ div.side-menu, .side-menu-open, .side-menu-close {
 
 
 
-@media (max-width: 700px) {
+@media (max-width: 380px) {
     li{
         display: none;
     }

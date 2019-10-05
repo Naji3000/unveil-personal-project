@@ -36,7 +36,7 @@ class Freelancer extends React.Component {
                 
                 <div className='portfolio-name'>
                     <h1 className='check-me'>Check out my post!</h1>
-                        <div>
+                        <div className='text-info-profile'>
                         {this.state.post.map((val, i) => {
                             return <Post 
                                 key={i}

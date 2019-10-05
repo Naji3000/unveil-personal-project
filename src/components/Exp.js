@@ -35,8 +35,8 @@ class Exp extends React.Component {
         
         return(
             <>
-            {/* <ExpNav /> */}
-            <ExploreNav />
+            <ExpNav />
+            {/* <ExploreNav /> */}
             {/* <FeedNav /> */}
 
             <section className='exp-container'>
@@ -44,17 +44,19 @@ class Exp extends React.Component {
                 <h1>EXPLORE</h1>
 
                 </div>
-                <div className='exp-box'>
-                {this.state.allPost.map((val, i) => {
-                    return <Post 
-                        key={i}
-                        feedPic={val.url}
-                        postTitle={val.title}
-                        postDescription={val.description}
-                    />
-                })}
 
-                </div>
+                
+                                <div className='exp-box'>
+                                {this.state.allPost.map((val, i) => {
+                                    return <Post 
+                                        key={i}
+                                        feedPic={val.url}
+                                        postTitle={val.title}
+                                        postDescription={val.description}
+                                    />
+                                })}
+
+                                </div>
 
             </section>
 

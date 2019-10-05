@@ -147,8 +147,8 @@ class Feed extends React.Component {
         
                         </input>
 
-                        <button onClick={()=> widget.open()}>Select image!</button>
-                        <button className='post-button' onClick={this.handleClick} >Post!</button>
+                        <button onClick={()=> widget.open()}>Select image</button>
+                        <button className='post-button' onClick={this.handleClick} >Post</button>
 
                         <img alt="" className="photo" src={this.state.feedPic} />
                     

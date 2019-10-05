@@ -1,6 +1,7 @@
 .container-post{
     display: flex;
     justify-content: center;
+    text-align: center;
     /* align-items: center; */
     width: 100vw;
     height: 80vh;
@@ -12,7 +13,8 @@
     justify-content: center;
     animation: neon9 .5s infinite alternate;
     font-family: 'Alfa Slab One', cursive;
-    font-size: 35px
+    font-size: 35px;
+    text-align: center
     
 }
 .box-1 {
@@ -23,7 +25,7 @@
     text-align: center;
     background-color: rgba(77, 193, 223, 0.473);
     height: 68vh;
-    width: 50vw;
+    width: 80vw;
     /* justify-content: center; */
     overflow: scroll;
 }
@@ -69,7 +71,7 @@
 .input-description{
     margin-bottom: 30px;
     height: 40px;
-    width: 200px;
+    width: 150px;
     border-radius: 10px;
 }
 

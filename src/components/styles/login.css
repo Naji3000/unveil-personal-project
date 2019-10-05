@@ -85,7 +85,7 @@
     background: #4285f4;
     border-radius: 5px;
     transform: scale(0);
-    transition-property: transform,opacity;
+    /* transition-property: transform opacity; */
 }
 
 .google-button:hover::before {

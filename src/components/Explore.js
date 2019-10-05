@@ -5,6 +5,7 @@ import Post from './Post'
 import {updateUser} from '../redux/reducers/userReducer'
 import {connect} from 'react-redux'
 import './styles/explore.css'
+// import ExpNav from './ExpNav';
 
 class Explore extends React.Component {
     constructor(){
@@ -34,6 +35,7 @@ class Explore extends React.Component {
         
         return(
             <>
+            {/* <ExpNav /> */}
             <ExploreNav />
             {/* <FeedNav /> */}
 
@@ -43,7 +45,7 @@ class Explore extends React.Component {
 
                 </div>
                 <div className='explore-box'>
-                    <h1>Put something here</h1>
+                    
                 {this.state.post.map((val, i) => {
                     return <Post 
                         key={i}

@@ -119,12 +119,12 @@ class Register extends React.Component{
                                                         </div>
 
             <div>
-                <Link onClick={this.registerClick} to='/user'>
-                <button className='register-button' >Get Started</button>
+                <Link onClick={this.registerClick} className='register-button'  to='/user'>
+                <h1 >Get Started </h1>
                 </Link>
             </div>
-            <Link to='/employer'>
-                    <button className='employer-button'>Employer</button>
+            <Link className='employer-button' to='/employer'>
+                    <h1 >Employer</h1>
             </Link>
 
 

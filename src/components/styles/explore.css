@@ -23,8 +23,10 @@
     flex-direction: column;
     background-color: rgba(77, 194, 223, 0.473);
     height:70vh;
-    width: 50vw;
+    width: 80vw;
     border-radius: 20px;
+    overflow: scroll;
+    color: white;
 }
 
 

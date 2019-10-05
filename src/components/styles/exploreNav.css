@@ -111,8 +111,8 @@ div.the-slide, .the-slide-open, .the-slide-close {
 .burger-button-2  {
     display: flex;
     justify-content: center;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     cursor: pointer;
     border-radius: 5px;
     filter: invert(1)
@@ -120,7 +120,7 @@ div.the-slide, .the-slide-open, .the-slide-close {
 
 
 
-@media (max-width: 700px) {
+@media (max-width: 380px) {
     li{
         display: none;
     }
