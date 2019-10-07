@@ -131,7 +131,7 @@ div.the-slide, .the-slide-open, .the-slide-close {
 
 
 
-@media (max-width: 380px) {
+@media (max-width: 450px) {
     li{
         display: none;
     }

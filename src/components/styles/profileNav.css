@@ -135,7 +135,7 @@ div.slide-menu, .slide-menu-open, .slide-menu-close {
 
 
 
-@media (max-width: 380px) {
+@media (max-width: 450px) {
     li{
         display: none;
     }

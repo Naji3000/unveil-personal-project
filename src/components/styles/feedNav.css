@@ -137,7 +137,7 @@ div.side-menu, .side-menu-open, .side-menu-close {
 
 
 
-@media (max-width: 380px) {
+@media (max-width: 450px) {
     li{
         display: none;
     }
