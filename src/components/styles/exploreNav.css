@@ -91,6 +91,17 @@ div.the-slide, .the-slide-open, .the-slide-close {
     margin-top: 70px;
     
 }
+.the-slide-link-3{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Kalam', cursive;
+    font-size: 20px;
+    text-decoration: none;
+    color: #c7b0cc;
+    margin-top: 70px;
+
+}
 
 
 @keyframes open {

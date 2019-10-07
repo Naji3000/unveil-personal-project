@@ -67,6 +67,9 @@ class ExploreNav extends React.Component {
                 <Link className='the-slide-link-2' to='/user'>
                     <h1>Profile</h1>
                 </Link>
+                <Link onClick={this.logoutUser} className='the-slide-link-3' to='/' >
+                <h1>Logout</h1>
+                </Link>
             </div>
             </>
         )

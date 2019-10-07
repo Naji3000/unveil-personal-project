@@ -3,7 +3,7 @@ import axios from 'axios'
 import firebase from 'firebase';
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth"
 import './styles/login.css'
-import {updateUser} from '../redux/reducers/userReducer'
+import {updateUser, employerEdit} from '../redux/reducers/userReducer'
 import {connect} from 'react-redux'
 import {Link} from "react-router-dom"
 require('dotenv').config()
@@ -146,4 +146,4 @@ const mapStateToProps = reduxState => {
     }
 }
 
-export default connect(mapStateToProps, {updateUser}) (Login)
+export default connect(mapStateToProps, {updateUser, employerEdit}) (Login)

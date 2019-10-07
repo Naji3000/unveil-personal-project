@@ -69,6 +69,9 @@ class ProfileNav extends React.Component {
                 <Link className = 'slide-link-2' to ='/explore'>
                     <h1>Explore</h1>
                 </Link>
+                <Link onClick={this.logoutUser} className='slide-link-3' to='/'>
+                <h1>Logout</h1>
+                </Link>
             </div>
             
             </>

@@ -4,7 +4,6 @@ import Post from './Post'
 import {updateUser} from '../redux/reducers/userReducer'
 import {connect} from 'react-redux'
 import './styles/exp.css'
-import ExploreNav from './ExploreNav'
 import ExpNav from './ExpNav';
 
 class Exp extends React.Component {

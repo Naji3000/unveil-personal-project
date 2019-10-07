@@ -94,6 +94,17 @@ div.slide-menu, .slide-menu-open, .slide-menu-close {
     margin-top: 70px;
 }
 
+.slide-link-3 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Kalam', cursive;
+    font-size: 20px;
+    text-decoration: none;
+    color: #c7b0cc;
+    margin-top: 70px;
+}
+
 
 
 

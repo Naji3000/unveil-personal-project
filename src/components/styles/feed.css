@@ -78,6 +78,8 @@
 .text-info {
     color: white;
     margin-bottom: 30px;
+    text-align: center;
+    flex-direction: column;
 
 }
 

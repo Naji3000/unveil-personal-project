@@ -67,6 +67,7 @@ class Post extends React.Component {
                             onClick={this.handleClick}>
                                 Save
                             </button>
+                        
                         }
                         <button
                         onClick={this.handleDelete}>Delete</button>
@@ -80,7 +81,8 @@ class Post extends React.Component {
 
 const mapStateToProps = reduxState => {
     return {
-        user: reduxState.userReducer.user_id
+        user: reduxState.userReducer.user_id,
+        // showEdit: reduxState.userReducer.showEdit
     }
 }
 

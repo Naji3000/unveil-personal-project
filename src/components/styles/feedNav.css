@@ -99,6 +99,17 @@ div.side-menu, .side-menu-open, .side-menu-close {
     margin-top: 70px;
     
 }
+.side-menu-link-3 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Kalam', cursive;
+    font-size: 20px;
+    text-decoration: none;
+    color: #c7b0cc;
+    margin-top: 70px;
+    
+}
 
 @keyframes open {
     to {

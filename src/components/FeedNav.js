@@ -65,6 +65,9 @@ class feedNav extends React.Component {
                 <Link className='side-menu-link-2' to='/explore'>
                     <h1>Explore</h1>
                 </Link>
+                <Link onClick={this.logoutUser} className='side-menu-link-3' to ='/'>
+                <h1>Logout</h1>
+                </Link>
             </div>
             </>
         )
