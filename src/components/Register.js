@@ -124,7 +124,7 @@ class Register extends React.Component{
                 </Link>
             </div>
             <Link className='employer-button' to='/employer'>
-                    <h1 >Employer</h1>
+                    <h1>Scout</h1>
             </Link>
 
 

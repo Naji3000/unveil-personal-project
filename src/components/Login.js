@@ -105,6 +105,12 @@ loginClick = () => {
         
                         <div className='register-text'>
                         <h6>Don't have an account yet? <Link to='/'>Register here.</Link></h6>
+
+                        </div>
+                        
+                        <div className='privacy'>
+
+                        <h6> <Link to ='/privacy'>Privacy Policy</Link></h6>
                         </div>
 
                         <h6>Or connect with</h6>

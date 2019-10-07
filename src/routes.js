@@ -7,6 +7,7 @@ import Freelancer from './components/Freelancer'
 import Explore from './components/Explore'
 import Feed from './components/Feed'
 import Exp from './components/Exp'
+import PrivacyPol from './components/PrivacyPol'
 
 export default (
     <Switch>
@@ -16,7 +17,7 @@ export default (
         <Route path='/explore' component={Explore}/>
         <Route path='/feed' component={Feed}/>
         <Route path='/scout' component={Exp}/>
+        <Route path='/privacy' component={PrivacyPol} />
         <Route exact path='/' component={Register}/>
-        <Route />
     </Switch>
 )
