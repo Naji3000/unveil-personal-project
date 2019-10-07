@@ -45,7 +45,8 @@ class Explore extends React.Component {
 
                 </div>
                 <div className='explore-box'>
-                    
+                    <div className='explore-content'>
+
                 {this.state.post.map((val, i) => {
                     return <Post 
                         key={i}
@@ -54,6 +55,8 @@ class Explore extends React.Component {
                         postDescription={val.description}
                     />
                 })}
+                    </div>
+                    
 
                 </div>
 

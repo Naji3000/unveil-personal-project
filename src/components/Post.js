@@ -1,4 +1,5 @@
 import React from "react";
+import {Player} from 'video-react'
 import {updateUser} from '../redux/reducers/userReducer'
 import {connect} from 'react-redux'
 import axios from "axios";
@@ -38,7 +39,8 @@ class Post extends React.Component {
                     <>
                         <h3>{this.props.postTitle}</h3>
                         <h4>{this.props.postDescription}</h4>
-                        <img className="photo" src={this.props.feedPic} alt={this.props.postTitle}/>
+                        <img className="photo" src={this.props.feedPic} alt={this.props.postTitle} />
+                        
                         
                     </>
                     :

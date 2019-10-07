@@ -46,14 +46,17 @@ class Exp extends React.Component {
 
                 
                                 <div className='exp-box'>
-                                {this.state.allPost.map((val, i) => {
-                                    return <Post 
-                                        key={i}
-                                        feedPic={val.url}
-                                        postTitle={val.title}
-                                        postDescription={val.description}
-                                    />
-                                })}
+                                    <div className='exp-content'>
+                                            {this.state.allPost.map((val, i) => {
+                                                return <Post 
+                                                    key={i}
+                                                    feedPic={val.url}
+                                                    postTitle={val.title}
+                                                    postDescription={val.description}
+                                                />
+                                            })}
+
+                                    </div>
 
                                 </div>
 
