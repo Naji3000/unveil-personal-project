@@ -17,7 +17,7 @@ class Employer extends React.Component{
             <section >
             
             <div className='employer' >
-                <h1 className='choose'>Choose The Industry You Would Like To View </h1>
+                <h1 className='choose'>Choose Th ....... It doesn't matter, just click the button </h1>
             </div>
 
 
@@ -25,10 +25,8 @@ class Employer extends React.Component{
                 
                 <Link className='buttons' to='/scout'>
                     
-                <button className="button-1">Audio Engineer</button>
-                <button className="button-3">Film Comp.</button>
-                <button className="button-4">Game Designer</button>
-                <button className="button-5">Sound Designer</button>
+                <button className="button-1">Click Me</button>
+                
             
 
                 </Link>

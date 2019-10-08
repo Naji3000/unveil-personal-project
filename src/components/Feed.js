@@ -1,6 +1,5 @@
 import React from 'react';
 import FeedNav from './FeedNav'
-import {Player} from  'video-react'
 import axios from 'axios'
 import Post from './Post'
 import Spinner from 'react-spinkit'
@@ -18,7 +17,6 @@ class Feed extends React.Component {
             postDescription: '',
             feedPic: '',
             previousPosts: [],
-            // images: [],
             selectedFile: null,
             loading: null
         }
@@ -151,7 +149,6 @@ class Feed extends React.Component {
                         <button className='post-button' onClick={this.handleClick} >Post</button>
 
                         <img alt="" className="photo" src={this.state.feedPic} />
-                        {/* <Player  src={this.state.feedPic}></Player> */}
                     
             </div>
 

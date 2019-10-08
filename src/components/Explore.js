@@ -17,18 +17,18 @@ class Explore extends React.Component {
     }
     
     componentDidMount(){
-        axios.get('/api/user/posts').then(res => {
-            this.setState({post: res.data})
-        })
-            // this.allPost();
+        // axios.get('/api/user/posts').then(res => {
+        //     this.setState({post: res.data})
+        // })
+            this.allPost();
     }
-            // allPost = () => {
-            //     axios.get('/api/user/allPost').then (res => {
-            //         console.log(res)
-            //         this.setState({allPost: res.data})
+            allPost = () => {
+                axios.get('/api/user/allPost').then (res => {
+                    console.log(res)
+                    this.setState({allPost: res.data})
 
-            //     })
-            // }
+                })
+            }
     
 
     render(){
@@ -47,7 +47,7 @@ class Explore extends React.Component {
                 <div className='explore-box'>
                     <div className='explore-content'>
 
-                {this.state.post.map((val, i) => {
+                {this.state.allPost.map((val, i) => {
                     return <Post 
                         key={i}
                         feedPic={val.url}

@@ -41,7 +41,6 @@ class Post extends React.Component {
                         <h4>{this.props.postDescription}</h4>
                         <img className="photo" src={this.props.feedPic} alt={this.props.postTitle} />
                         
-                        {/* <Player  src={this.props.feedPic}></Player> */}
                         
                     
                     </>
