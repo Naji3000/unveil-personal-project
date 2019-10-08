@@ -1,10 +1,10 @@
 import React from 'react';
 import axios from 'axios'
 import Post from './Post'
-import profileNav from './styles/profileNav.css'
+// import profileNav from './styles/profileNav.css'
 import {Link} from 'react-router-dom'
 import './styles/freelanceProfile.css'
-import ProfileNav from './ProfileNav';
+import ProfileNav from './profileNav';
 
 
 
