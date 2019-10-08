@@ -36,8 +36,8 @@ class Login extends React.Component {
         }
     }
 
-    componentDidMount = (e) => {
-        e.preventDefault()
+    componentDidMount = () => {
+        
     firebase.auth().onAuthStateChanged(user => {
         this.setState({ isSignedIn: user })
             console.log("user", user)
