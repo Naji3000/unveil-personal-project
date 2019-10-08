@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import './styles/employer.css'
+import './styles/Employer.css'
 
 
 class Employer extends React.Component{
