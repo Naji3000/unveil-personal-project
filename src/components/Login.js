@@ -11,7 +11,7 @@ require('dotenv').config()
 
 firebase.initializeApp({
     apiKey: process.env.REACT_APP_FIREBASE_KEY,
-    authDomain: "unveil.live"
+    authDomain: "104.248.222.111"
 })
 
 class Login extends React.Component {
@@ -23,7 +23,7 @@ class Login extends React.Component {
                     shouldRedirect: false,
                     triedToClick: false,
                     serverErrorMessage: "",
-                    isSignedIn: null
+                    isSignedIn: false
                 }
             }
     uiConfig = {
@@ -32,7 +32,7 @@ class Login extends React.Component {
         firebase.auth.GoogleAuthProvider.PROVIDER_ID,
         ],
         callbacks: {
-            signInSuccess: () => true
+            signInSuccess: () => false
         }
     }
 
