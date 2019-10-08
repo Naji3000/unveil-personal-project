@@ -23,7 +23,7 @@ class Login extends React.Component {
                     shouldRedirect: false,
                     triedToClick: false,
                     serverErrorMessage: "",
-                    isSignedIn: false
+                    isSignedIn: null
                 }
             }
     uiConfig = {
@@ -32,11 +32,12 @@ class Login extends React.Component {
         firebase.auth.GoogleAuthProvider.PROVIDER_ID,
         ],
         callbacks: {
-            signInSuccess: () => false
+            signInSuccess: () => true
         }
     }
 
-    componentDidMount = () => {
+    componentDidMount = (e) => {
+        e.preventDefault()
     firebase.auth().onAuthStateChanged(user => {
         this.setState({ isSignedIn: user })
             console.log("user", user)
