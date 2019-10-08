@@ -32,49 +32,7 @@ body {
     border: 2px;
     border-radius: 15px;
     color: white;
-    /* background-image: url(""); */
-    padding: 14px 28px;
-    cursor: pointer;
-    font-size: 30px;
-    background-color: rgba(47, 178, 201, 0.527);
-    font-family: 'Alfa Slab One', cursive;
-    margin-bottom: 30px
-}
-
-.button-3 {
-    display: block flex;
-    width: 50%;
-    border: 2px;
-    border-radius: 20px;
-    color: white;
     text-align: center;
-    padding: 14px 28px;
-    cursor: pointer;
-    font-size: 30px;
-    background-color: rgba(47, 178, 201, 0.527);
-    font-family: 'Alfa Slab One', cursive;
-    margin-bottom: 30px
-}
-.button-4 {
-    display: block flex;
-    width: 50%;
-    border: 2px;
-    border-radius: 20px;
-    color: white;
-    /* background-image: url(""); */
-    padding: 14px 28px;
-    cursor: pointer;
-    font-size: 30px;
-    background-color: rgba(47, 178, 201, 0.527);
-    font-family: 'Alfa Slab One', cursive;
-    margin-bottom: 30px
-}
-.button-5 {
-    display: block flex;
-    width: 50%;
-    border: 2px;
-    border-radius: 20px;
-    color: white;
     /* background-image: url(""); */
     padding: 14px 28px;
     cursor: pointer;

@@ -33,14 +33,14 @@ class Post extends React.Component {
     render() {
         return (
             <div>
-
+                
                 {
                     this.state.inEditStatus === false ?
                     <>
                         <h3>{this.props.postTitle}</h3>
                         <h4>{this.props.postDescription}</h4>
                         <img className="photo" src={this.props.feedPic} alt={this.props.postTitle} />
-                        
+
                         
                     
                     </>
