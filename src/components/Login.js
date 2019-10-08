@@ -11,7 +11,7 @@ require('dotenv').config()
 
 firebase.initializeApp({
     apiKey: process.env.REACT_APP_FIREBASE_KEY,
-    authDomain: "unveil-62c36.firebaseapp.com"
+    authDomain: "104.248.222.111"
 })
 
 class Login extends React.Component {
