@@ -8,8 +8,10 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 // const Datastore = require('nedb');
 // const Pusher = require('pusher')
-const {registerUser, loginUser,logoutUser} = require('./controllers/authController')
+const {registerUser, loginUser,logoutUser, isUserTrue} = require('./controllers/authController')
+
 const {addPost, getPost, getAllPost, getPreviousPosts, editPost, deletePost} = require('./controllers/postController')
+
 const {CONNECTION_STRING, SESSION_SECRET} = process.env
 
 //express app
@@ -68,6 +70,7 @@ app.post('/auth/logout', logoutUser)
 app.get("/auth/user", (req, res) => {
     res.status(200).json(req.session.user);
 })
+app.get('/auth/userTrue', isUserTrue);
 
 //post
 app.post('/api/post', addPost)

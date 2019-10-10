@@ -2,6 +2,8 @@ import React from 'react';
 import axios from 'axios'
 import './styles/exploreNav.css'
 import {Link} from 'react-router-dom'
+import {connect} from 'react-redux'
+import {employerEdit, userTrue} from '../redux/reducers/userReducer'
 
 
 class ExploreNav extends React.Component {
@@ -13,6 +15,7 @@ class ExploreNav extends React.Component {
 
         }
     }
+    
 
     toggle = () => {
         if(this.state.menuOpenStatus === 'the-slide-close' || this.state.menuOpenStatus === 'the-slide'){
@@ -24,15 +27,17 @@ class ExploreNav extends React.Component {
 
     logoutUser = () => {
         axios.post('/auth/logout')
+        this.props.employerEdit(false)
 
     }
 
     render(){
+        
         return(
             <>
             <nav className='Explore-Nav'>
                 <div>
-                    <Link className='nav-explore' to='/' >
+                    <Link className='nav-explore' to='/' > 
                     <h1>unveil</h1>
                     </Link>
                 </div>
@@ -76,4 +81,4 @@ class ExploreNav extends React.Component {
     }
 }
 
-export default ExploreNav;
+export default connect(null, {employerEdit, userTrue })(ExploreNav);

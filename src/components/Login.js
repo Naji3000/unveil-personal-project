@@ -40,7 +40,7 @@ class Login extends React.Component {
         
     firebase.auth().onAuthStateChanged(user => {
         this.setState({ isSignedIn: user })
-            console.log("user", user)
+            // console.log("user", user)
     })
 }
 
@@ -65,7 +65,10 @@ loginClick = () => {
         }).catch(err => {
             this.setState({serverErrorMessage: err.response.data.error})
         })
+        this.props.employerEdit(true);
+        
     }
+
 }
 
 
@@ -99,7 +102,7 @@ loginClick = () => {
                                             onChange={this.handleChange}/>
                                         </div>
                         
-
+                        
                         <Link  onClick={this.loginClick} className='login-button' to='/user'>
                         <button>Login</button>
                         </Link>
@@ -149,7 +152,8 @@ loginClick = () => {
 
 const mapStateToProps = reduxState => {
     return {
-        user: reduxState.userReducer.user
+        user: reduxState.userReducer.user,
+        showEdit: reduxState.userReducer.showEdit
     }
 }
 

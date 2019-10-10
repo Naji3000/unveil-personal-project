@@ -1,5 +1,4 @@
 import React from "react";
-
 import {updateUser} from '../redux/reducers/userReducer'
 import {connect} from 'react-redux'
 import axios from "axios";
@@ -31,6 +30,7 @@ class Post extends React.Component {
     }
 
     render() {
+        console.log(this.props.showEdit)
         return (
             <div>
                 
@@ -40,9 +40,6 @@ class Post extends React.Component {
                         <h3>{this.props.postTitle}</h3>
                         <h4>{this.props.postDescription}</h4>
                         <img className="photo" src={this.props.feedPic} alt={this.props.postTitle} />
-
-                        
-                    
                     </>
                     :
                     <>
@@ -58,25 +55,39 @@ class Post extends React.Component {
                     </>
                 }
                 
-                        
-                        {
-                            this.state.inEditStatus === false ?
+                {
+                    this.state.inEditStatus == false ? 
+                <button onClick={()=> this.setState({inEditStatus: true})}>
+                    Edit
+                </button>
+                :
+                <button onClick={this.handleClick}>
+                    Save
+                </button>
+                }
+                <button onClick={this.handleDelete}>
+                    delete
+                </button>
+
+                        {/* {
+                            this.props.showEdit === true && this.state.inEditStatus === false ?
+                            <div>
                             <button
                             onClick={() => this.setState({inEditStatus: true})}>
                                 Edit
                             </button>
+                            <button
+                            onClick={this.handleDelete}>Delete</button>
+                            </div>
                         :
+                            this.props.showEdit === true && this.state.inEditStatus === true ?
                             <button
                             onClick={this.handleClick}>
                                 Save
                             </button>
-                        
-                        }
-                        <button
-                        onClick={this.handleDelete}>Delete</button>
-                
-                    {/* <button onClick>Change</button> */}
-                
+                        :
+                        null
+                        } */}
             </div>
         )
     }
@@ -85,7 +96,7 @@ class Post extends React.Component {
 const mapStateToProps = reduxState => {
     return {
         user: reduxState.userReducer.user_id,
-        // showEdit: reduxState.userReducer.showEdit
+        showEdit: reduxState.userReducer.showEdit
     }
 }
 

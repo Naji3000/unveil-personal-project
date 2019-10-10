@@ -15,24 +15,19 @@ class Explore extends React.Component {
             allPost: []
         }
     }
-    
     componentDidMount(){
-        // axios.get('/api/user/posts').then(res => {
-        //     this.setState({post: res.data})
-        // })
-            this.allPost();
+        this.allPost();
+            // axios.get('/api/user/posts').then(res => {
+            //     this.setState({post: res.data})})
     }
             allPost = () => {
                 axios.get('/api/user/allPost').then (res => {
                     console.log(res)
                     this.setState({allPost: res.data})
-
                 })
             }
-    
 
     render(){
-        
         return(
             <>
             {/* <ExpNav /> */}
@@ -56,15 +51,9 @@ class Explore extends React.Component {
                     />
                 })}
                     </div>
-                    
-
                 </div>
-
             </section>
-
-        
             </>
-
 
         )
     }

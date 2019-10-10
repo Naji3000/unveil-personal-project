@@ -2,6 +2,8 @@ import React from 'react';
 import '../components/styles/profileNav.css'
 import axios from 'axios'
 import {Link} from 'react-router-dom'
+import {employerEdit, userTrue} from '../redux/reducers/userReducer'
+import {connect} from 'react-redux'
 
 
 class ProfileNav extends React.Component {
@@ -14,6 +16,7 @@ class ProfileNav extends React.Component {
         }
     }
     
+    
     toggle = () => {
         if(this.state.menuOpenStatus === 'slide-menu-close' || this.state.menuOpenStatus === 'slide-menu'){
             this.setState({menuOpenStatus: 'slide-menu-open'})
@@ -23,10 +26,14 @@ class ProfileNav extends React.Component {
     }
     logoutUser = () => {
         axios.post('/auth/logout')
+        this.props.employerEdit(false);
 
     }
 
     render(){
+    
+            
+        
         return(
             <>
             <nav className='Profile-Nav'>
@@ -79,4 +86,4 @@ class ProfileNav extends React.Component {
     }
 }
 
-export default ProfileNav;
+export default connect(null, {employerEdit, userTrue})(ProfileNav);

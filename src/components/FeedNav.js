@@ -2,6 +2,8 @@ import React from 'react';
 import axios from 'axios'
 import './styles/feedNav.css'
 import {Link} from 'react-router-dom'
+import {connect} from 'react-redux'
+import {employerEdit, userTrue} from '../redux/reducers/userReducer'
 
 
 class feedNav extends React.Component {
@@ -13,6 +15,7 @@ class feedNav extends React.Component {
 
         }
     }
+    
 
     toggle= () => {
         if(this.state.menuStatusOpen === 'side-menu-close' || this.state.menuStatusOpen === 'side-menu'){
@@ -23,7 +26,7 @@ class feedNav extends React.Component {
     }
     logoutUser = () => {
         axios.post('/auth/logout')
-
+        this.props.employerEdit(false);
     }
 
     render(){
@@ -74,4 +77,4 @@ class feedNav extends React.Component {
     }
 }
 
-export default feedNav;
+export default connect(null, {employerEdit, userTrue})(feedNav);

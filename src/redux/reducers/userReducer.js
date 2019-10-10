@@ -1,4 +1,4 @@
-
+import axios from 'axios'
 
 const initialState = {
     user: {},
@@ -7,6 +7,7 @@ const initialState = {
 
 const SHOW_EDIT = "SHOW_EDIT"
 const UPDATE_USER = "UPDATE_USER"
+const GET_USER = 'GET_USER'
 
 export function updateUser(user){
     return {
@@ -15,15 +16,19 @@ export function updateUser(user){
     }
 }
 
-export function employerEdit () {
+export function employerEdit (bool) {
     return {
         type: SHOW_EDIT,
-        payload: !this.showEdit
+        payload: bool
     }
 }
 
-
-
+export function userTrue () {
+    return {
+        type: GET_USER,
+        payload: axios.get('/auth/userTrue').then(response => response.data)
+    }
+}
 
 export default function reducer(state = initialState, action){
     switch(action.type){
@@ -37,6 +42,11 @@ export default function reducer(state = initialState, action){
                 ...state,
                 showEdit: action.payload
             }
+            case `${GET_USER}_FULFILLED`:
+                return{
+                    ...state,
+                    showEdit: action.payload
+                }
         default: return state
     }
 }

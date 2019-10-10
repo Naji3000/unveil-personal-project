@@ -30,6 +30,14 @@ async function registerUser(req, res){
     }
 }
 
+function isUserTrue (req,res) {
+    let bool = false;
+    if (req.session.user){
+        bool = true;
+    }
+    res.status(200).json(bool);
+}
+
 
 
 function loginUser(req,res) {
@@ -68,5 +76,6 @@ function logoutUser (req, res) {
 module.exports = {
     registerUser,
     loginUser,
-    logoutUser
+    logoutUser,
+    isUserTrue
 }

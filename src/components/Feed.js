@@ -26,53 +26,6 @@ class Feed extends React.Component {
         this.setState({
         loading: true,
         });
-
-    //     axios.get('/cloud/gallery').then(({ data }) => {
-    //     this.setState({
-            
-    //         images: [...data, ...this.state.images],
-    //         loading: false
-
-            
-    //     });
-    //     // console.log(this.state.images)
-    //     });
-
-    //     const pusher = new Pusher({
-    //         key: process.env.PUSHER_APP_KEY,
-    //         cluster: process.env.PUSHER_APP_CLUSTER,
-    //         encrypted: true,
-    //     });
-
-    //     const channel = pusher.subscribe('gallery');
-    //         channel.bind('upload', data => {
-    //         this.setState({
-    //             images: [data.image, ...this.state.images],
-    //         });
-    //     });
-    // }
-
-    // fileChange = event => {
-    //     const file = event.target.files[0];
-    //     this.setState({ selectedFile: file });
-    // };
-
-    // uploadImage = event => {
-    //     event.preventDefault();
-
-    //     if (!this.state.selectedFile) return;
-    //     const formData = new FormData();
-    //         formData.append(
-    //         'image',
-    //         this.state.selectedFile,
-    //         this.state.selectedFile.name
-    //     );
-
-    //     axios.post('/cloud/upload', formData).then(({ data }) => {
-    //     this.setState({
-    //         loading: false,
-    //     });
-    //     });
     };
 
 
@@ -95,11 +48,6 @@ class Feed extends React.Component {
         this.fetchPosts();
     }
 
-    // showWidget = (widget) => {
-    //     widget.open()
-
-    // }
-
     checkUploadedPic = (event, resultEvent) => {
         if(resultEvent.event === 'success'){
             this.setState({feedPic: resultEvent.info.url})
@@ -107,23 +55,17 @@ class Feed extends React.Component {
     }
 
     render(){
-
+        
         var widget = window.cloudinary.createUploadWidget({ 
             cloudName: "ddxmzokt6", 
             uploadPreset: "Unveil-upload",
             sources: ["local", "url", "dropbox", "facebook", "instagram"]},
             (error, result) => { this.checkUploadedPic(error, result)});
 
-        
-            
-        
-        // const images = this.state.images.map((e, index) => image(e.secure_url, index));
-
         const sortedArr = this.state.previousPosts.sort((a, b) => {
             return a.post_id - b.post_id;
         });
         // {console.log(this.state)}
-
         return(
             <>
             <FeedNav />
@@ -142,7 +84,6 @@ class Feed extends React.Component {
                         />
                         <input className='input-description' placeholder='Description' 
                         onChange={e => this.setState({postDescription: e.target.value})}>
-        
                         </input>
 
                         <button onClick={()=> widget.open()}>Select image</button>
@@ -151,46 +92,24 @@ class Feed extends React.Component {
                         <img alt="" className="photo" src={this.state.feedPic} />
                     
             </div>
-
-            {/* <form className='feed-form' method="post" onSubmit={this.uploadImage}>
-
-                    <label className="label" htmlFor="gallery-image">
-                        Select an image to upload
-                    </label>
-
-                            <input
-                                className='file-change'
-                                type="file"
-                                onChange={this.fileChange}
-                                id="gallery-image"
-                                accept=".jpg, .jpeg, .png .gif"
-                            />
-
-                            <button  type='submit'>Upload!</button>
-            </form> */}
-
-
             <div className='loading-indicator'>
                 {this.state.loading ? <Spinner name="spinner" /> : ''}
             </div>
-            
-                                            <div className='text-info'>
-                                                        {sortedArr.map(userPost => {
-                                                            return (
-                                                            <>
-                                                                <Post 
-                                                                id={userPost.post_id}
-                                                                postTitle={userPost.title} 
-                                                                postDescription={userPost.description}
-                                                                feedPic = {userPost.url}
-                                                                updatePreviousPosts={this.updatePreviousPosts}
-                                                                />
-                                                            </>
-                                                            )
-                                                        })}     
-                                            </div>
-
-            {/* <div className='image-gallery'>{images}</div> */}
+                    <div className='text-info'>
+                        {sortedArr.map(userPost => {
+                            return (
+                                <>
+                                    <Post 
+                                        id={userPost.post_id}
+                                        postTitle={userPost.title} 
+                                        postDescription={userPost.description}
+                                        feedPic = {userPost.url}
+                                        updatePreviousPosts={this.updatePreviousPosts}
+                                        />
+                                </>
+                            )
+                            })}     
+                    </div>
             </div>
             </section>
             </>
