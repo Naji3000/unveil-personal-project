@@ -1,4 +1,4 @@
-const bcrypt = require('hrl')
+const bcrypt = require('bcryptjs')
 
 
 
@@ -28,14 +28,6 @@ async function registerUser(req, res){
             error: "Username or Email Already Exist."
         })
     }
-}
-
-function isUserTrue (req,res) {
-    let bool = false;
-    if (req.session.user){
-        bool = true;
-    }
-    res.status(200).json(bool);
 }
 
 
@@ -79,5 +71,4 @@ module.exports = {
     registerUser,
     loginUser,
     logoutUser,
-    isUserTrue
 }

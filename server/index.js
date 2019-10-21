@@ -31,7 +31,7 @@ app.use(session({
     saveUninitialized: true,
     secret: SESSION_SECRET,
     cookie: {
-        maxAge: 1000 * 60 * 60 * 24 * 7
+        maxAge: 1000 * 60 * 60 * 24 * 10
     }
 }))
 
@@ -57,7 +57,7 @@ app.post('/auth/logout', logoutUser)
 app.get("/auth/user", (req, res) => {
     res.status(200).json(req.session.user);
 })
-app.get('/auth/userTrue', isUserTrue);
+// app.get('/auth/userTrue', isUserTrue);
 
 //post
 app.post('/api/post', addPost)
@@ -71,34 +71,6 @@ app.delete('/api/post/:id', deletePost)
 app.get('/api/user/allPost', getAllPost)
 
 
-
-
-//cloudinary endpoints
-
-// app.get('/cloud/gallery', (req, res) => {
-//     db.find({}, (err, data) => {
-//     if (err) return res.status(500).send(err);
-//     res.json(data);
-//     });
-// });
-
-// app.post('/cloud/upload', multipartMiddleware, (req, res) => {
-//     cloudinary.v2.uploader.upload(req.files.image.path, {}, function(error,result) {
-
-//         if (error) {
-//             return res.status(500).send(error);
-//     } 
-//     db.insert(Object.assign({}, result, req.body), (err, newDoc) => {
-//             if (err) {
-//                 return res.status(500).send(err);
-//             }
-//                     pusher.trigger('gallery', 'upload', {
-//                         image: newDoc,
-//             });
-//                             res.status(200).json(newDoc);
-//         });
-//     });
-// });
 
 
 
