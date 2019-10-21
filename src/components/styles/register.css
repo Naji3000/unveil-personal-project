@@ -20,14 +20,14 @@
     width: 5vw;
     margin-top: 5px;
     margin-bottom: 5px;
-    border: 1px solid #ffffff;
-    border-radius: 4px;
+    /* border: 1px solid #ffffff;
+    border-radius: 4px; */
     color: #f7f7f7;
     cursor: pointer;
     font-size: 10px;
     text-decoration: none;
-    padding: 2px;
-    background-color:rgba(156, 117, 195, 0.644);
+    /* padding: 2px;
+    background-color:rgba(156, 117, 195, 0.644); */
     
     
 }
@@ -168,13 +168,13 @@
 }
 
 .account-option {
-    color: #000000;
+    color: #c569d1;
     
 }
 
 .login-link {
     text-decoration: none;
-    color: #000000;
+    color: #ffffff;
     animation: neon200 .8s infinite alternate;
 }
 

@@ -22,6 +22,7 @@ async function registerUser(req, res){
                 res.status(200).json(req.session.user)
             })
         })
+        
     } else {
         console.log("ac22")
         res.status(409).json({
