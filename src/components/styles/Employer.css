@@ -1,11 +1,11 @@
 body {
-    /* background-image: url('https://images.pexels.com/photos/1387174/pexels-photo-1387174.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'); */
+    background-image: url('https://images.pexels.com/photos/1387174/pexels-photo-1387174.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
     /* background-image: url('http://giphygifs.s3.amazonaws.com/media/aRZ4vTsHnyW6A/giphy.gif'); */
     /* background: url('https://media0.giphy.com/media/3oGRFkmoqoui9nzL2g/giphy.gif?cid=790b7611c9dccf95930178478e00d7c6e971075578862cb2&rid=giphy.gif') no-repeat ; */
 
 
     
-    background: url('https://media2.giphy.com/media/BHNfhgU63qrks/giphy.gif?cid=790b76111583a5eed78d0fb4c77418c75e1cf95ef9932aa0&rid=giphy.gif') no-repeat center center fixed;
+    /* background: url('https://media2.giphy.com/media/BHNfhgU63qrks/giphy.gif?cid=790b76111583a5eed78d0fb4c77418c75e1cf95ef9932aa0&rid=giphy.gif') no-repeat center center fixed; */
     background-repeat: no-repeat;
     background-size: cover;
     /* background-position-y: 100%;  */

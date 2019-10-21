@@ -46,19 +46,6 @@ massive(CONNECTION_STRING)
     console.log("database_connect")
 })
 
-// const pusher = new Pusher({
-//     appId: process.env.PUSHER_APP_ID,
-//     key: process.env.PUSHER_APP_KEY,
-//     secret: process.env.PUSHER_APP_SECRET,
-//     cluster: process.env.PUSHER_APP_CLUSTER,
-//     encrypted: true,
-// });
-
-// cloudinary.config({
-//     cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
-//     api_key: process.env.CLOUDINARY_API_KEY,
-//     api_secret: process.env.CLOUDINARY_API_SECRET,
-// });
 
 
 //endpoints

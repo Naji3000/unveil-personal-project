@@ -18,15 +18,16 @@
     display: flex;
     justify-content: center;
     width: 5vw;
+    margin-top: 5px;
     margin-bottom: 5px;
-    /* border: 1px solid #9f3ba8;
-    border-radius: 4px; */
+    border: 1px solid #ffffff;
+    border-radius: 4px;
     color: #f7f7f7;
     cursor: pointer;
     font-size: 10px;
-    text-decoration: none
-    /* padding: 5px;
-    background-color:rgba(112, 43, 146, 0.61); */
+    text-decoration: none;
+    padding: 2px;
+    background-color:rgba(156, 117, 195, 0.644);
     
     
 }
@@ -38,12 +39,12 @@
     font-size: 20px;    
     background-color: transparent;
     border: none;
-    border-top: 2px solid #4EA5D9; 
+    border-top: 2px solid rgb(195, 141, 229); 
     /* border-top: 2px solid rgb(217, 134, 78);  */    
-    border-bottom: 2px solid #4EA5D9;
+    border-bottom: 2px solid rgb(195, 141, 229);
     /* border-bottom: 2px solid rgb(217, 134, 78);  */
     outline: none;
-    color: #4EA5D9;
+    color: rgb(255, 255, 255);
     font-size:18px;
     font-weight:normal;
     transition:0.2s ease all; 
@@ -64,12 +65,12 @@
     font-size: 20px;    
     background-color: transparent;
     border: none;
-    border-top: 2px solid #4EA5D9; 
+    border-top: 2px solid rgb(195, 141, 229);
     /* border-top: 2px solid rgb(217, 134, 78);  */       
-    border-bottom: 2px solid #4EA5D9;
+    border-bottom: 2px solid rgb(195, 141, 229);
     /* border-bottom: 2px solid rgb(217, 134, 78);  */
     outline: none;
-    color: #4EA5D9;
+    color: rgb(255, 255, 255);
     font-size:18px;
     font-weight:normal;
     transition:0.2s ease all; 
@@ -88,12 +89,12 @@
     font-size: 20px;    
     background-color: transparent;
     border: none;
-    border-top: 2px solid #4EA5D9;
+    border-top: 2px solid rgb(195, 141, 229);
     /* border-top: 2px solid rgb(217, 134, 78);  */    
-    border-bottom: 2px solid #4EA5D9;
+    border-bottom: 2px solid rgb(195, 141, 229);
     /* border-bottom: 2px solid rgb(217, 134, 78);  */
     outline: none;
-    color: #4EA5D9;
+    color: rgb(255, 255, 255);
     font-size:18px;
     font-weight:normal;
     transition:0.2s ease all; 
@@ -112,12 +113,12 @@
     font-size: 20px;    
     background-color: transparent;
     border: none;
-    border-top: 2px solid #4EA5D9;   
+    border-top: 2px solid rgb(195, 141, 229);   
     /* border-top: 2px solid rgb(217, 134, 78);    */
-    border-bottom: 2px solid #4EA5D9;
+    border-bottom: 2px solid rgb(195, 141, 229);
     /* border-bottom: 2px solid rgb(217, 134, 78);  */
     outline: none;
-    color: #4EA5D9;
+    color: rgb(255, 255, 255);
     font-size:18px;
     font-weight:normal;
     transition:0.2s ease all; 
@@ -136,12 +137,12 @@
     font-size: 20px;    
     background-color: transparent;
     border: none;
-    border-top: 2px solid #4EA5D9;
+    border-top: 2px solid rgb(195, 141, 229);
     /* border-top: 2px solid rgb(217, 134, 78);    */    
-    border-bottom: 2px solid #4EA5D9;
+    border-bottom: 2px solid rgb(195, 141, 229);
     /* border-bottom: 2px solid rgb(217, 134, 78);  */
     outline: none;
-    color: #4EA5D9;
+    color: rgb(254, 254, 254);
     font-weight: normal;
     transition:0.2s ease all; 
 }
@@ -156,26 +157,35 @@
     display: flex;
     justify-content: center;
     text-align: center;
-    /* border: 1px solid #9f3ba8;
-    border-radius: 4px; */
-    color: #f7f7f7;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    color: #ffffff;
     cursor: pointer;
     font-size: 10px;
-    text-decoration: none
-    /* padding: 10px 20px;
-    background-color: rgba(102, 51, 153, 0.644); */
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: rgba(156, 117, 195, 0.644);
 }
 
 .account-option {
-    color: #c288c7;
+    color: #000000;
     
 }
 
 .login-link {
     text-decoration: none;
-    color: #f7f7f7
+    color: #000000;
+    animation: neon200 .8s infinite alternate;
 }
 
+@keyframes neon200 {
+    from {
+        text-shadow: 0 0 5px  0 0 40px #000000, 0 0 70px #ee68dc, 0 0 80px #ee68dc, 0 0 100px #ee68dc, 0 0 150px #ee68dc;
+    }
+    to {
+        text-shadow:  0 0 20px #ee68dc, 0 0 35px #ee68dc, 0 0 40px #ee68dc, 0 0 50px #ee68dc, 0 0 75px #ee68dc;
+    }
+    }
 
 
 /* .firstName-button {

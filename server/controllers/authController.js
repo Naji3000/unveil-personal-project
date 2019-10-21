@@ -1,4 +1,4 @@
-const bcrypt = require('bcryptjs')
+const bcrypt = require('hrl')
 
 
 
@@ -66,6 +66,8 @@ function loginUser(req,res) {
         })
     })
 }
+
+
 function logoutUser (req, res) {
     req.session.destroy();
     res.sendStatus(200);
