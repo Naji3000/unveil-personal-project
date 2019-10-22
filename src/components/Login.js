@@ -68,7 +68,6 @@ loginClick = () => {
         this.props.employerEdit(true);
         
     }
-
 }
 
 
